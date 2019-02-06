@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Default suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)(failed)">
+    <classes>
+      <class name="src.Task1">
+        <methods>
+          <include name="ph_numberspecialchar"/>
+          <include name="email_int"/>
+          <include name="ph_numberless"/>
+          <include name="lastnamespecialchar"/>
+          <include name="lastnameinteger"/>
+          <include name="ph_numbermore"/>
+          <include name="firstnameinteger"/>
+          <include name="checkvalidation"/>
+          <include name="confirm_password_int"/>
+          <include name="firstnamespecialchar"/>
+          <include name="ph_numberchar"/>
+        </methods>
+      </class> <!-- src.Task1 -->
+    </classes>
+  </test> <!-- Default test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Default suite]] -->

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="src.Wfs_automation">
+        <methods>
+          <include name="password_alpha"/>
+          <include name="email"/>
+          <include name="firstnameinteger"/>
+          <include name="department"/>
+          <include name="password"/>
+          <include name="browserlaunch"/>
+          <include name="confirm_password_real"/>
+          <include name="confirm_password_int"/>
+          <include name="email_specialsymbol"/>
+          <include name="checkvalidation"/>
+          <include name="yopmail"/>
+          <include name="lastnamespecialchar"/>
+          <include name="admin"/>
+          <include name="confirm_password"/>
+          <include name="ph_numberless"/>
+          <include name="lastnameinteger"/>
+          <include name="ph_numbermore"/>
+          <include name="email_dot"/>
+          <include name="firstnamespecialchar"/>
+          <include name="ph_numberchar"/>
+          <include name="department_submit"/>
+          <include name="email_real"/>
+          <include name="firstnamereal"/>
+          <include name="companyname"/>
+          <include name="dept_real"/>
+          <include name="departmenttcode"/>
+          <include name="email_int"/>
+          <include name="password_real"/>
+          <include name="confirm_password_8"/>
+          <include name="ph_numberspecialchar"/>
+          <include name="checkbox"/>
+          <include name="ph_number_real"/>
+          <include name="department_name"/>
+          <include name="lastnamereal"/>
+        </methods>
+      </class> <!-- src.Wfs_automation -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
