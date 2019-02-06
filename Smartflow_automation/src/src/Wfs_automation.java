@@ -36,7 +36,7 @@ public class Wfs_automation {
 		}
 	
 	
-//---------------------------------------signup form click on submit with blank value  ----------------------------------------//
+//--------------------------------------click on submit with blank value  ----------------------------------------//
 
 @Test(priority=2)
 	
@@ -100,7 +100,7 @@ public class Wfs_automation {
 		        Thread.sleep(2000);
 		      }
 	
- //----------------------------------------lastname with special symbol-------------------------------------------------------//
+ //----------------------------------------last name with special symbol-------------------------------------------------------//
 	
 	@Test(priority=4 , dependsOnMethods = "checkvalidation")
 	
@@ -114,7 +114,7 @@ public class Wfs_automation {
 			     Thread.sleep(2000);
 			     driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
 			     String l_name_result = driver.findElement(By.id("m_user_login_last_name-error")).getText();
-			     String expected_l_name_result ="special character are not allowed";
+			     String expected_l_name_result ="special symbols are not allowed.";
 				 Assert.assertEquals(expected_l_name_result,l_name_result);
 			
 				
@@ -122,6 +122,8 @@ public class Wfs_automation {
 	       }
 	
 //------------------------------------last name with integer---------------------------------------------------------//	
+	
+	
 	@Test(priority=5 , dependsOnMethods = "checkvalidation")
 	
 		    public void lastnameinteger()throws InterruptedException  
@@ -133,16 +135,15 @@ public class Wfs_automation {
 			     Thread.sleep(2000);
 				 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
 			     String l_name_result1 = driver.findElement(By.id("m_user_login_last_name-error")).getText();
-			     String expected_l_name_result1 ="integers are not allowed";
+			     String expected_l_name_result1 ="Integers are not allowed";
 				 Assert.assertEquals(expected_l_name_result1,l_name_result1);
-				 
-				
 		    }
 	
-//-------------------------------------last name real----------------------------------------------------------------//				 
+//-------------------------------------last name with real value--------------------------------------------------------//	
+	
+	
   @Test(priority=6 , dependsOnMethods = "checkvalidation")
-                
-                //enter lastname real
+           
   
 			 public void lastnamereal()throws InterruptedException  
 		      {
@@ -156,7 +157,7 @@ public class Wfs_automation {
 			
 				 
 			  
-//----------------------------------------firstname with special symbol--------------------------------------//
+//----------------------------------------first name with special symbol--------------------------------------//
 
 
 
@@ -172,7 +173,7 @@ public class Wfs_automation {
 			     Thread.sleep(2000);
 			     driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
 			     String f_name_result = driver.findElement(By.id("m_user_login_first_name-error")).getText();
-			     String expected_f_name_result ="special character are not allowed";
+			     String expected_f_name_result ="special symbols are not allowed";
 				 Assert.assertEquals(expected_f_name_result,f_name_result);
 				 
 	         }
@@ -192,11 +193,11 @@ public class Wfs_automation {
 			     Thread.sleep(2000);
 				 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
 			     String f_name_result1 = driver.findElement(By.id("m_user_login_first_name-error")).getText();
-			     String expected_f_name_result1 ="integers are not allowed";
+			     String expected_f_name_result1 ="Integers are not allowed";
 				 Assert.assertEquals(expected_f_name_result1,f_name_result1);
 		    }
 	
-//------------------------------------------firstname real------------------------------------------------------------//	
+//------------------------------------------first name with real value-----------------------------------------------//	
 				 
   @Test(priority=9 , dependsOnMethods = "checkvalidation")
 
@@ -218,8 +219,7 @@ public class Wfs_automation {
   
   @Test(priority=10 , dependsOnMethods = "checkvalidation")
   
-  
-      		//enter character and check validation 
+         //enter character and check validation 
   
 		 public void ph_numberchar()throws InterruptedException  
 	     {
@@ -233,12 +233,13 @@ public class Wfs_automation {
 		     String ph_validation_massage = "please enter phone number with 10 digit ";
 		     Assert.assertEquals(ph_number_result, ph_validation_massage);
 		     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-			 
+		    
 	    }
   
   
   
- //---------------------------------------------phone number with special character-----------------------------------// 			
+ //---------------------------------------------phone number with special symbol-----------------------------------//
+  
     @Test(priority=11 , dependsOnMethods = "checkvalidation")
 		    // enter special character and check validation
 		  
@@ -301,10 +302,34 @@ public class Wfs_automation {
 			 
 			 }
  
+ 
+ //--------------------------------- phone number with alphabet+ integer --------------------------------------//
+
+ @Test(priority=14, dependsOnMethods = "checkvalidation")
+  
+ //enter more than 10 digit
+
+			 public void ph_numbermix()throws InterruptedException  
+			 { 
+	 
+	          
+				 WebElement ph_numbermore = driver.findElement(By.id("m_user_login_phone"));
+				 ph_numbermore.clear();
+				 ph_numbermore.sendKeys("abcdr1222");
+			     Thread.sleep(2000);
+				 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
+				 String ph_number_result4 = driver.findElement(By.id("phone_validation_msg")).getText();
+				 String ph_validation_massage4 = "please enter phone number with 10 digit ";
+				 Assert.assertEquals(ph_number_result4, ph_validation_massage4);
+				 
+			 
+			 }
+ 
+ 
  //-------------------------------------------real phone number------------------------------------------------------//
   
  // enter real phone number
-  @Test(priority=14 , dependsOnMethods = "checkvalidation")
+  @Test(priority=15 , dependsOnMethods = "checkvalidation")
 
 			 public void ph_number_real()throws InterruptedException  
 			 {
@@ -313,21 +338,17 @@ public class Wfs_automation {
 				 ph_number_real.sendKeys("7567630234");
 			     Thread.sleep(2000);
 
-
 			 }
   
 //-------------------------------------------E-mail -----------------------------------------------------//
-
   
   
-  
-  @Test(priority=15 , dependsOnMethods = "checkvalidation")
+  @Test(priority=16 , dependsOnMethods = "checkvalidation")
 
 			 public void email()throws InterruptedException  
 			 {
 			  // enter only name
 	  
-	  		 	
 				 WebElement email = driver.findElement(By.id("m_user_login_email"));
 				 email.clear();
 				 email.sendKeys("test");
@@ -341,7 +362,7 @@ public class Wfs_automation {
   
   //--------------------------------enter email with dot------------------------------------------------------//
   
-  @Test(priority=16 , dependsOnMethods = "checkvalidation")
+  @Test(priority=17 , dependsOnMethods = "checkvalidation")
 
 		 public void email_dot()throws InterruptedException  
 		 {
@@ -360,13 +381,13 @@ public class Wfs_automation {
   
   //------------------------------------enter email with special character---------------------------------------------------------//
   
-  @Test(priority=17 , dependsOnMethods = "checkvalidation")
+  @Test(priority=18 , dependsOnMethods = "checkvalidation")
 
 			 public void email_specialsymbol()throws InterruptedException  
 			 {
-			  // enter email with special symbol
+			  // enter email with special symbol, name and integer
 	  
-	       
+	  
 				 WebElement email_specialsymbol = driver.findElement(By.id("m_user_login_email"));
 				 email_specialsymbol.clear();
 				 email_specialsymbol.sendKeys("test@123&*");
@@ -377,9 +398,9 @@ public class Wfs_automation {
 			     Assert.assertEquals(email_expect_msg2,email_validation_msg2);
 			 }
   
-  //------------------------------------enter email with integer-----------------------------------------------------------//
+  //------------------------------------enter email with integer and alphabets-----------------------------------------------------------//
   
-  @Test(priority=18 , dependsOnMethods = "checkvalidation")
+  @Test(priority=19 , dependsOnMethods = "checkvalidation")
 
 			 public void email_int()throws InterruptedException  
 			 {
@@ -387,7 +408,7 @@ public class Wfs_automation {
 	  
 				 WebElement email_int = driver.findElement(By.id("m_user_login_email"));
 				 email_int.clear();
-				 email_int.sendKeys("test@12");
+				 email_int.sendKeys("test12");
 			     Thread.sleep(2000);
 				 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
 				 String email_expect_msg3 = driver.findElement(By.id("m_user_login_email-error")).getText();
@@ -397,9 +418,9 @@ public class Wfs_automation {
 			 }
   
   
- //----------------------------------------random email  generate---------------------------------------------------------//
+ //----------------------------------------random email generate---------------------------------------------------------//
   
-  @Test(priority=19 , dependsOnMethods = "checkvalidation")
+  @Test(priority=20 , dependsOnMethods = "checkvalidation")
 
 			 public void email_real()throws InterruptedException  
 			 
@@ -421,11 +442,10 @@ public class Wfs_automation {
   //------------------------------------password with less than eight digit------------------------------------------------//
 
     
-  @Test(priority=20 , dependsOnMethods = "checkvalidation")
+  @Test(priority=21 , dependsOnMethods = "checkvalidation")
 
-  
 		  //less than eight digit
-		  
+  
 			 public void password()throws InterruptedException  
 			 {
 	  
@@ -443,7 +463,7 @@ public class Wfs_automation {
 
 //--------------------------password with less than eight alphabet--------------------------------------------------------// 
   
-  @Test(priority=21 , dependsOnMethods = "checkvalidation")
+  @Test(priority=22 , dependsOnMethods = "checkvalidation")
   
 	  public void password_alpha()throws InterruptedException  
 		 {
@@ -458,34 +478,65 @@ public class Wfs_automation {
 		 
 		 }
   
-  //--------------------------------------------real password------------------------------------------------------//
   
-  @Test(priority=22 , dependsOnMethods = "checkvalidation")
+//--------------------------password with 8 alphabet --------------------------------------------------------// 
   
-    // real password
+  @Test(priority=23 , dependsOnMethods = "checkvalidation")
   
-	  public void password_real()throws InterruptedException  
+	  public void password_mix()throws InterruptedException  
 		 {
-	  
-	       
 			 WebElement password_alpha = driver.findElement(By.id("m_user_login_password"));
 			 password_alpha.clear();
-			 password_alpha.sendKeys("password");
+			 password_alpha.sendKeys("chandnii");
 			 Thread.sleep(2000);
-		
-	     
+			 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
+			 String password_expect_msg2 = driver.findElement(By.id("m_user_login_password-error")).getText();
+			 String password_validation_msg2 = "Please enter 8 digit password with character and integer";
+		     Assert.assertEquals(password_expect_msg2,password_validation_msg2);
+		 
+		 }
+  
+  
+//--------------------------password with 8 integer --------------------------------------------------------// 
+  
+  @Test(priority=24 , dependsOnMethods = "checkvalidation")
+  
+	  public void password_i()throws InterruptedException  
+		 {
+			 WebElement password_alpha = driver.findElement(By.id("m_user_login_password"));
+			 password_alpha.clear();
+			 password_alpha.sendKeys("123456789");
+			 Thread.sleep(2000);
+			 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
+			 String password_expect_msg3 = driver.findElement(By.id("m_user_login_password-error")).getText();
+			 String password_validation_msg3 = "Please enter 8 digit password with character and integer";
+		     Assert.assertEquals(password_expect_msg3,password_validation_msg3);
+		 
+		 }
+  
+  //--------------------------------------------real password------------------------------------------------------//
+  
+  @Test(priority=25 , dependsOnMethods = "checkvalidation")
+  
+    // real password
+   
+	      public void password_real()throws InterruptedException  
+		  {
+	  
+			 WebElement password_alpha = driver.findElement(By.id("m_user_login_password"));
+			 password_alpha.clear();
+			 password_alpha.sendKeys("password38");
+			 Thread.sleep(2000);
+			 
 		 }
 
-  
-  
  //-----------------------------------------confirm password------------------------------------------------------//
   
-  
- //enter less than 8 character
-  
-@Test(priority=23 , dependsOnMethods = "checkvalidation")
 
-// enter less then 8 character
+  
+@Test(priority=26 , dependsOnMethods = "checkvalidation")
+
+//-------------------------- enter less then 8 character----------------------------------------------------------//
 
 	     public void confirm_password()throws InterruptedException  
          {
@@ -504,7 +555,7 @@ public class Wfs_automation {
 
 //---------------------------------------enter less than 8 integer-------------------------------------------------//
 
-   @Test(priority=24 , dependsOnMethods = "checkvalidation")
+   @Test(priority=27 , dependsOnMethods = "checkvalidation")
  
    
 	      public void confirm_password_int()throws InterruptedException  
@@ -521,10 +572,31 @@ public class Wfs_automation {
 		    
 		    
 	     }
+   
+ //---------------------------------------enter less than 8 integer-------------------------------------------------//
+
+   @Test(priority=28 , dependsOnMethods = "checkvalidation")
+ 
+   
+	      public void confirm_password_i()throws InterruptedException  
+		   {
+      
+            WebElement confirm_password_int = driver.findElement(By.id("m_user_login_password_confirmation"));
+		    confirm_password_int.clear();
+		    confirm_password_int.sendKeys("12345678");
+		    Thread.sleep(2000);
+		    driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
+		    String confirm_pass_expect_msg2 = driver.findElement(By.id("m_user_login_password_confirmation-error")).getText();
+		    String confirm_pass_validation_msg2 = "Please enter the same value again.";
+		    Assert.assertEquals( confirm_pass_expect_msg2 , confirm_pass_validation_msg2);
+		    
+		    
+	     }
+
 
  //--------------------------------------------digit and alphabet---------------------------------------------------------//
    
-   @Test(priority=25 , dependsOnMethods = "checkvalidation")
+   @Test(priority=29 , dependsOnMethods = "checkvalidation")
  
       public void confirm_password_8()throws InterruptedException  
 	   {
@@ -543,24 +615,22 @@ public class Wfs_automation {
    
    //------------------------ real confirm password--------------------------------------------------------------//
    
-  @Test(priority=26 , dependsOnMethods = "checkvalidation")
+  @Test(priority=30, dependsOnMethods = "checkvalidation")
    
         public void confirm_password_real()throws InterruptedException  
         {
 	   
            WebElement confirm_password_8 = driver.findElement(By.id("m_user_login_password_confirmation"));
 		   confirm_password_8.clear();
-		   confirm_password_8.sendKeys("password");
+		   confirm_password_8.sendKeys("password38");
 		   Thread.sleep(2000);
     
         }
-  
-
    
 //------------------------------------------ checkbox select----------------------------------------------------//
    
-   @Test(priority=27 , dependsOnMethods = "checkvalidation")
-   
+   @Test(priority=31 , dependsOnMethods = "checkvalidation")
+  
 		   public void checkbox()throws InterruptedException 
 		   {
               
@@ -577,7 +647,7 @@ public class Wfs_automation {
 			}
  //--------------------------yopmail conformation--------------------------------------------------------//
    
-   @Test(priority=28 , dependsOnMethods = "checkvalidation")
+   @Test(priority=32 , dependsOnMethods = "checkvalidation")
    
    public void yopmail()throws InterruptedException  
    {
@@ -624,7 +694,7 @@ public class Wfs_automation {
 		
 		driver.findElement(By.id("m_user_login_email")).sendKeys(test);
 		Thread.sleep(2000);
-	    driver.findElement(By.id("m_user_login_password")).sendKeys("password");
+	    driver.findElement(By.id("m_user_login_password")).sendKeys("password38");
 	    Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div/div[2]/div[4]/button[2]")).click();
 	    
@@ -633,7 +703,7 @@ public class Wfs_automation {
    
  //-------------------------------------------Admin----------------------------------------------------------//
    
-  @Test(priority=29 , dependsOnMethods = "checkvalidation")
+  @Test(priority=33 , dependsOnMethods = "checkvalidation")
    
    public void admin()throws InterruptedException  
    {
@@ -643,9 +713,9 @@ public class Wfs_automation {
 	
    }
   
- //---------------------------------------------------Department----------------------------------------------//
+ //-----------------------------------------------Enter into department----------------------------------------------//
    
- @Test(priority=30 , dependsOnMethods = "checkvalidation")
+ @Test(priority=34 , dependsOnMethods = "checkvalidation")
    
    public void department()throws InterruptedException  
    {
@@ -659,9 +729,9 @@ public class Wfs_automation {
      
    }
  
- //---------------------department(click on submit and check name and code validation)---------------------------------------------------//
+ //---------------------department(click on submit and check validation of code and name)---------------------------------------------------//
  
- @Test(priority=31 , dependsOnMethods = "department")
+ @Test(priority=35 , dependsOnMethods = "department")
  
  public void department_submit()throws InterruptedException  
  {
@@ -687,7 +757,7 @@ public class Wfs_automation {
  
  //---------------------department(enter only department name)---------------------------------------------------//
     
- @Test(priority=32 , dependsOnMethods = "department")
+ @Test(priority=36 , dependsOnMethods = "department")
  
  public void department_name()throws InterruptedException  
  {
@@ -695,10 +765,12 @@ public class Wfs_automation {
     
 	    driver.findElement(By.name("dept_name")).clear();
 	    driver.findElement(By.name("dept_name")).sendKeys("A");
-	    Thread.sleep(2000);												
+	    Thread.sleep(2000);	
+	    
 	    driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
 	    String dept21 = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[1]/div[2]/div/span[3]/span")).getText();
 	    String deptcodemsg1 = "Code is required";
+	    
 	    Assert.assertEquals(dept21,deptcodemsg1);
 	    driver.findElement(By.name("dept_name")).clear();
 }
@@ -706,7 +778,7 @@ public class Wfs_automation {
  
  //---------------------department(enter only department code )---------------------------------------------------//
 
- @Test(priority=33 , dependsOnMethods = "department")
+ @Test(priority=37 , dependsOnMethods = "department")
  
  public void departmenttcode()throws InterruptedException  
  
@@ -715,11 +787,13 @@ public class Wfs_automation {
  {
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     driver.findElement(By.name("code")).clear();
-    driver.findElement(By.name("code")).sendKeys("01");
+    driver.findElement(By.name("code")).sendKeys("02");
     Thread.sleep(2000);
+    
     driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
     String dept211 = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[1]/div[1]/div/span[3]/span")).getText();
     String deptcodemsg11 = "Name is required";
+    
     Assert.assertEquals(dept211,deptcodemsg11);
     driver.findElement(By.name("dept_name")).clear();
    
@@ -728,7 +802,7 @@ public class Wfs_automation {
  //---------------------department(department with real value)-----------------------------------------------------//
 
  
-@Test(priority=34 , dependsOnMethods = "department")
+@Test(priority=38 , dependsOnMethods = "department")
 
 public void dept_real()throws InterruptedException  
 {
@@ -737,35 +811,66 @@ public void dept_real()throws InterruptedException
 	 driver.findElement(By.name("dept_name")).clear();
 	 driver.findElement(By.name("dept_name")).sendKeys("A");
 	 Thread.sleep(2000);
+	 
 	 driver.findElement(By.name("code")).clear();
 	 driver.findElement(By.name("code")).sendKeys("02");
 	 Thread.sleep(2000);
+	 
      driver.findElement(By.id("textArea")).sendKeys("This is A department");
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
 	 Thread.sleep(2000);
 }
 
 
-////----------------department(department is already exist)----------------------------------------------------------------//
+//-----------------------------------------department validation while edit------------------------------------------------------//
 
-//@Test (priority=35 , dependsOnMethods= "")
-//public void dept_exist()throws InterruptedException  
-//{
-//	// real value
-//	 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//	 driver.findElement(By.name("dept_name")).clear();
-//	 driver.findElement(By.name("dept_name")).sendKeys("A");
-//	 Thread.sleep(2000);
-//	 driver.findElement(By.name("code")).clear();
-//	 driver.findElement(By.name("code")).sendKeys("02");
-//	 Thread.sleep(2000);
-//     driver.findElement(By.id("textArea")).sendKeys("This is A department");
-//	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-//	 Thread.sleep(2000);
-//	 
-//	 String name_val = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[1]/div[1]/div/span[3]/span")).getText();
-//	 System.out.println(name_val);
-//}
+
+@Test(priority =39 , dependsOnMethods = "department")
+
+public void dept_edit() throws InterruptedException
+
+{
+	driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[3]/div/div/ul/li[2]/h4/a/span")).click();
+	
+	     Thread.sleep(2000);		 
+		 driver.findElement(By.name("dept_name")).clear();
+		 driver.findElement(By.name("dept_name")).sendKeys("unassigned");
+		 
+		 Thread.sleep(2000);
+		 driver.findElement(By.name("code")).clear();
+		 driver.findElement(By.name("code")).sendKeys("01");
+		 Thread.sleep(3000);
+		 
+		 driver.findElement(By.id("textArea")).clear();
+	     driver.findElement(By.id("textArea")).sendKeys("This is A department");
+		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
+		 Thread.sleep(3000);
+
+		// validation of department name
+		 String dept1 = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[1]/div[1]/div/span[4]")).getText();
+		 String deptmsg = "Name already exists.";
+		 Assert.assertEquals(dept1,deptmsg);
+		    
+		    
+		 // validation of department code
+		 String dept2 = driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[1]/div[2]/div/span[4]")).getText();
+		 String deptcodemsg = "Department Code already exists.";
+		 Assert.assertEquals(dept2,deptcodemsg);
+		 	   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //-----------------------------------------department upload using csv---------------------------------------------------// 
 
