@@ -5,18 +5,27 @@
     <classes>
       <class name="src.Wfs_automation">
         <methods>
-          <include name="lastnamespecialchar"/>
-          <include name="password_mix"/>
-          <include name="firstnameinteger"/>
-          <include name="ph_numberspecialchar"/>
-          <include name="ph_numberless"/>
-          <include name="lastnameinteger"/>
-          <include name="password_i"/>
-          <include name="ph_numbermore"/>
-          <include name="ph_numbermix"/>
-          <include name="firstnamespecialchar"/>
-          <include name="ph_numberchar"/>
+          <include name="department_submit"/>
+          <include name="email_real"/>
+          <include name="department"/>
+          <include name="confirm_password_real"/>
+          <include name="firstnamereal"/>
+          <include name="dept_real"/>
           <include name="checkvalidation"/>
+          <include name="dept_csv"/>
+          <include name="yopmail"/>
+          <include name="departmenttcode"/>
+          <include name="password_real"/>
+          <include name="dept_csv_samedata"/>
+          <include name="dept_csv_samenddiff"/>
+          <include name="admin"/>
+          <include name="dept_edit"/>
+          <include name="dept_B_delete"/>
+          <include name="parent_dept"/>
+          <include name="checkbox"/>
+          <include name="ph_number_real"/>
+          <include name="department_name"/>
+          <include name="lastnamereal"/>
         </methods>
       </class> <!-- src.Wfs_automation -->
     </classes>
