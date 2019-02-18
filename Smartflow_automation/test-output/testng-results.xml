@@ -2,76 +2,76 @@
 <testng-results ignored="0" total="19" passed="17" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-18T12:37:27Z" name="Default suite" finished-at="2019-02-18T12:40:04Z" duration-ms="157647">
+  <suite started-at="2019-02-18T13:24:08Z" name="Default suite" finished-at="2019-02-18T13:27:03Z" duration-ms="175106">
     <groups>
     </groups>
-    <test started-at="2019-02-18T12:37:27Z" name="Default test" finished-at="2019-02-18T12:40:04Z" duration-ms="157647">
+    <test started-at="2019-02-18T13:24:08Z" name="Default test" finished-at="2019-02-18T13:27:03Z" duration-ms="175106">
       <class name="src.automation_position">
-        <test-method signature="browserlaunch()[pri:1, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:37:27Z" name="browserlaunch" finished-at="2019-02-18T12:38:06Z" duration-ms="39631" status="PASS">
+        <test-method signature="browserlaunch()[pri:1, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:08Z" name="browserlaunch" finished-at="2019-02-18T13:24:49Z" duration-ms="40502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserlaunch -->
-        <test-method signature="checkvalidation()[pri:2, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:06Z" name="checkvalidation" finished-at="2019-02-18T12:38:08Z" duration-ms="1192" status="PASS">
+        <test-method signature="checkvalidation()[pri:2, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:49Z" name="checkvalidation" finished-at="2019-02-18T13:24:50Z" duration-ms="1293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkvalidation -->
-        <test-method signature="companyname()[pri:3, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:08Z" name="companyname" finished-at="2019-02-18T12:38:10Z" duration-ms="2493" status="PASS">
+        <test-method signature="companyname()[pri:3, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:50Z" name="companyname" finished-at="2019-02-18T13:24:53Z" duration-ms="2579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- companyname -->
-        <test-method signature="lastnamereal()[pri:4, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:10Z" name="lastnamereal" finished-at="2019-02-18T12:38:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="395" status="PASS">
+        <test-method signature="lastnamereal()[pri:4, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:53Z" name="lastnamereal" finished-at="2019-02-18T13:24:53Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lastnamereal -->
-        <test-method signature="firstnamereal()[pri:5, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:11Z" name="firstnamereal" finished-at="2019-02-18T12:38:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="430" status="PASS">
+        <test-method signature="firstnamereal()[pri:5, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:53Z" name="firstnamereal" finished-at="2019-02-18T13:24:54Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstnamereal -->
-        <test-method signature="ph_number_real()[pri:6, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:11Z" name="ph_number_real" finished-at="2019-02-18T12:38:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="420" status="PASS">
+        <test-method signature="ph_number_real()[pri:6, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:54Z" name="ph_number_real" finished-at="2019-02-18T13:24:54Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ph_number_real -->
-        <test-method signature="email_real()[pri:7, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:11Z" name="email_real" finished-at="2019-02-18T12:38:14Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2818" status="PASS">
+        <test-method signature="email_real()[pri:7, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:54Z" name="email_real" finished-at="2019-02-18T13:24:57Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- email_real -->
-        <test-method signature="password_real()[pri:8, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:14Z" name="password_real" finished-at="2019-02-18T12:38:17Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2504" status="PASS">
+        <test-method signature="password_real()[pri:8, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:57Z" name="password_real" finished-at="2019-02-18T13:25:00Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2505" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- password_real -->
-        <test-method signature="confirm_password_real()[pri:9, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:17Z" name="confirm_password_real" finished-at="2019-02-18T12:38:19Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2543" status="PASS">
+        <test-method signature="confirm_password_real()[pri:9, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:25:00Z" name="confirm_password_real" finished-at="2019-02-18T13:25:02Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confirm_password_real -->
-        <test-method signature="checkbox()[pri:10, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:19Z" name="checkbox" finished-at="2019-02-18T12:38:27Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="7853" status="PASS">
+        <test-method signature="checkbox()[pri:10, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:25:02Z" name="checkbox" finished-at="2019-02-18T13:25:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="8797" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkbox -->
-        <test-method signature="yopmail()[pri:11, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:27Z" name="yopmail" finished-at="2019-02-18T12:39:28Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="60723" status="PASS">
+        <test-method signature="yopmail()[pri:11, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:25:11Z" name="yopmail" finished-at="2019-02-18T13:26:15Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="64242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- yopmail -->
-        <test-method signature="admin()[pri:12, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:28Z" name="admin" finished-at="2019-02-18T12:39:29Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="898" status="PASS">
+        <test-method signature="admin()[pri:12, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:15Z" name="admin" finished-at="2019-02-18T13:26:16Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- admin -->
-        <test-method signature="position()[pri:13, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:29Z" name="position" finished-at="2019-02-18T12:39:33Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4446" status="PASS">
+        <test-method signature="position()[pri:13, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:16Z" name="position" finished-at="2019-02-18T13:26:21Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- position -->
-        <test-method signature="submit()[pri:14, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:33Z" name="submit" finished-at="2019-02-18T12:39:36Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2889" status="PASS">
+        <test-method signature="submit()[pri:14, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:21Z" name="submit" finished-at="2019-02-18T13:26:24Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2950" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submit -->
-        <test-method signature="enter_only_position()[pri:15, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:36Z" name="enter_only_position" finished-at="2019-02-18T12:39:38Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1684" status="PASS">
+        <test-method signature="enter_only_position()[pri:15, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:24Z" name="enter_only_position" finished-at="2019-02-18T13:26:25Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enter_only_position -->
-        <test-method signature="enter_only_positioncode()[pri:16, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:38Z" name="enter_only_positioncode" finished-at="2019-02-18T12:39:39Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1647" status="PASS">
+        <test-method signature="enter_only_positioncode()[pri:16, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:25Z" name="enter_only_positioncode" finished-at="2019-02-18T13:26:27Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1687" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enter_only_positioncode -->
-        <test-method signature="add_samevalue_position()[pri:17, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:39Z" name="add_samevalue_position" finished-at="2019-02-18T12:39:44Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4621" status="FAIL">
+        <test-method signature="add_samevalue_position()[pri:17, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:27Z" name="add_samevalue_position" finished-at="2019-02-18T13:26:32Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4709" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [×
@@ -120,7 +120,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_samevalue_position -->
-        <test-method signature="delete_position()[pri:18, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:44Z" name="delete_position" finished-at="2019-02-18T12:39:46Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1536" status="FAIL">
+        <test-method signature="delete_position()[pri:18, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:32Z" name="delete_position" finished-at="2019-02-18T13:26:33Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1560" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [×
@@ -169,7 +169,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete_position -->
-        <test-method signature="real_position()[pri:19, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:46Z" name="real_position" finished-at="2019-02-18T12:40:04Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="18766" status="PASS">
+        <test-method signature="real_position()[pri:19, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:33Z" name="real_position" finished-at="2019-02-18T13:27:03Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="30037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- real_position -->
