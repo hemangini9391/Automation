@@ -967,84 +967,194 @@ public void dept_B_delete()throws InterruptedException
 	    
 }
 
+//--------------------------------------------------Enter C,D,E  department----------------------------------------//
+
+@Test(priority=42 , dependsOnMethods = "department")
+
+public void dept_c_dept()throws InterruptedException  
+{
+	// real value
+	 Thread.sleep(1000);
+	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
+	 
+	 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	 driver.findElement(By.name("dept_name")).clear();
+	 driver.findElement(By.name("dept_name")).sendKeys("C");
+	 Thread.sleep(2000);
+	 
+	 driver.findElement(By.name("code")).clear();
+	 driver.findElement(By.name("code")).sendKeys("04");
+	 Thread.sleep(2000);
+	 
+     driver.findElement(By.id("textArea")).sendKeys("This is B department");
+	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
+	 Thread.sleep(2000);
+	 
+	 
+      // D dept
+	 
+	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
+	  Thread.sleep(1000);
+	  
+	  driver.findElement(By.name("dept_name")).clear();
+	  driver.findElement(By.name("dept_name")).sendKeys("D");
+	  Thread.sleep(2000);
+		 
+	  driver.findElement(By.name("code")).clear();
+	  driver.findElement(By.name("code")).sendKeys("5");
+	  Thread.sleep(2000);
+	  	 
+	  driver.findElement(By.id("textArea")).sendKeys("This is D department");
+	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
+	  Thread.sleep(2000);
+	    
+
+
+      // E dept
+	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
+	  Thread.sleep(1000);
+
+	  driver.findElement(By.name("dept_name")).clear();
+	  driver.findElement(By.name("dept_name")).sendKeys("E");
+	  Thread.sleep(2000);
+	 
+	  driver.findElement(By.name("code")).clear();
+	  driver.findElement(By.name("code")).sendKeys("6");
+	  Thread.sleep(2000);
+	 
+	  driver.findElement(By.id("textArea")).sendKeys("This is E department");
+	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
+	  Thread.sleep(2000);
+	  
+	  
+	// b dept
+	     Thread.sleep(1000);
+		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
+		 
+		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		 driver.findElement(By.name("dept_name")).clear();
+		 driver.findElement(By.name("dept_name")).sendKeys("B");
+		 Thread.sleep(2000);
+		 
+		 driver.findElement(By.name("code")).clear();
+		 driver.findElement(By.name("code")).sendKeys("08");
+		 Thread.sleep(2000);
+		 
+	     driver.findElement(By.id("textArea")).sendKeys("This is B department");
+		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
+		 Thread.sleep(2000);
+		
+}
+
+
 
 //-----------------------------------------department upload using blank csv---------------------------------------------------// 
 
 
-@Test(priority=42 , dependsOnMethods = "department")
-
-   public void dept_csv() throws InterruptedException
-   {
-   //  blank csv upload
-	
-      driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-      WebElement uploadElement = driver.findElement(By.id("upload"));
-      uploadElement.sendKeys("‪C:\\Users\\rising1\\Desktop\\sample_department_list (2).csv");
-      driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
-      Thread.sleep(2000);
-      
-      
-      String alert_msg = driver.findElement(By.className("alertOut")).getText();
-      System.out.println("Alert Box message: " + alert_msg);
-      String alert_msg_real="×\n" + "Please Check CSV Sample data file.";
-      Assert.assertEquals(alert_msg, alert_msg_real);
-      
-      
-}
+//@Test(priority=43 , dependsOnMethods = "department")
+//
+//   public void dept_csv() throws InterruptedException
+//   {
+//   //  blank csv upload
+//	
+//      driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
+//      WebElement uploadElement = driver.findElement(By.id("upload"));
+//      uploadElement.sendKeys("‪C:\\Users\\rising1\\Desktop\\sample_department_list (2).csv");
+//      driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
+//      Thread.sleep(2000);
+//      
+//      
+//      String alert_msg = driver.findElement(By.className("alertOut")).getText();
+//      System.out.println("Alert Box message: " + alert_msg);
+//      String alert_msg_real="×\n" + "Please Check CSV Sample data file.";
+//      Assert.assertEquals(alert_msg, alert_msg_real);
+//      
+//      
+//}
 
 
 //--------------------------------------department csv upload with same above data--------------------------------------------//
 
 
-@Test(priority=42 , dependsOnMethods = "department")
-
-public void dept_csv_samedata() throws InterruptedException
-{
-//  blank csv upload
-	
-	Thread.sleep(1000);
-   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-   WebElement uploadElement = driver.findElement(By.id("upload"));
-   uploadElement.sendKeys("‪‪C:\\Users\\rising1\\Desktop\\automation_csv_samedata.csv");
-   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
-   Thread.sleep(2000);
-   
-   
-   String alert_msg = driver.findElement(By.className("alertOut")).getText();
-   System.out.println("Alert Box message: " + alert_msg);
-   String alert_msg_real="×\n" + "";
-   Assert.assertEquals(alert_msg, alert_msg_real);
-   
-   
-}
+//@Test(priority=44 , dependsOnMethods = "department")
+//
+//public void dept_csv_samedata() throws InterruptedException
+//{
+//   Thread.sleep(1000);
+//   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
+//   WebElement uploadElements = driver.findElement(By.id("upload"));
+//   uploadElements.sendKeys("‪E:\\dept automation file\\sd.csv");
+//   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
+//   Thread.sleep(2000);
+//   
+//   
+//   String alert_msg11 = driver.findElement(By.className("alertOut")).getText();
+//   System.out.println("Alert Box message: " + alert_msg11);
+//   String alert_msg_real1="×\n" + "コードは既に登録済です。新しいコードを入力して下さい。";
+//   Assert.assertEquals(alert_msg11, alert_msg_real1);
+//   
+//}
 //------------------------------department csv upload with same and different data----------------------------------//
 
-@Test(priority=43 , dependsOnMethods = "department")
+//@Test(priority=45 , dependsOnMethods = "department")
+//
+//public void dept_csv_samenddiff() throws InterruptedException
+//{
+////  blank csv upload
+//	
+//   Thread.sleep(1000);
+//   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
+//   WebElement uploadElementsd = driver.findElement(By.id("upload"));
+//   uploadElementsd.sendKeys("‪E:\\dept automation file\\s.csv");
+//   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
+//   Thread.sleep(2000);
+//   
+//   
+//   String alert_msg111 = driver.findElement(By.className("alertOut")).getText();
+//   System.out.println("Alert Box message: " + alert_msg111);
+//   String alert_msg_real11="×\n" + "コードは既に登録済です。新しいコードを入力して下さい。";
+//   Assert.assertEquals(alert_msg111, alert_msg_real11);
+//}
 
-public void dept_csv_samenddiff() throws InterruptedException
+//--------------------------------------------real csv-----------------------------------------------------------------//
+
+@Test(priority=46 , dependsOnMethods = "department")
+
+public void dept_csv_real() throws InterruptedException
 {
-//  blank csv upload
+
 	
-   Thread.sleep(1000);
+// Thread.sleep(1000);
+	
    driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-   WebElement uploadElement = driver.findElement(By.id("upload"));
-   uploadElement.sendKeys("‪‪C:\\Users\\rising1\\Desktop\\automation_csv_samedata.csv");
-   driver.findElement(By.xpath("‪C:\\Users\\rising1\\Desktop\\automation_sameandiff.csv")).click();
+   WebElement uploadElementreal = driver.findElement(By.id("upload"));
+   uploadElementreal.sendKeys("E:/dept automation file/real.csv");
    Thread.sleep(2000);
-   
-   
-   String alert_msg = driver.findElement(By.className("alertOut")).getText();
-   System.out.println("Alert Box message: " + alert_msg);
-   String alert_msg_real="×\n" + "Please Check CSV Sample data file.";
-   Assert.assertEquals(alert_msg, alert_msg_real);
-   
-}
-
-}
-
-
-
+   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
   
+   Thread.sleep(2000);
+   String alert_msg1111 = driver.findElement(By.className("alertOut")).getText();
+   System.out.println("Alert Box message: " + alert_msg1111);
+   String alert_msg_real111= "×\n" + "コードは既に登録済です。新しいコードを入力して下さい。";
+   Assert.assertEquals(alert_msg1111, alert_msg_real111);
+}
+
+
+@Test
+public void dept_download()
+{
+  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]")).click();
+	
+}
+
+
+//------------------------------------department ending------------------------------------------------------------//
+
+}
+
+
+
+
 
 
 

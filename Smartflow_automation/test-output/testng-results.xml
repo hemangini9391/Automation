@@ -1,30 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="23" passed="2" failed="1" skipped="20">
+<testng-results ignored="0" total="19" passed="17" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-11T10:44:14Z" name="Default suite" finished-at="2019-02-11T10:49:21Z" duration-ms="307296">
+  <suite started-at="2019-02-18T12:37:27Z" name="Default suite" finished-at="2019-02-18T12:40:04Z" duration-ms="157647">
     <groups>
     </groups>
-    <test started-at="2019-02-11T10:44:14Z" name="Default test" finished-at="2019-02-11T10:49:21Z" duration-ms="307296">
-      <class name="src.Wfs_automation">
-        <test-method signature="browserlaunch()[pri:1, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:44:14Z" name="browserlaunch" finished-at="2019-02-11T10:49:18Z" duration-ms="303938" status="PASS">
+    <test started-at="2019-02-18T12:37:27Z" name="Default test" finished-at="2019-02-18T12:40:04Z" duration-ms="157647">
+      <class name="src.automation_position">
+        <test-method signature="browserlaunch()[pri:1, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:37:27Z" name="browserlaunch" finished-at="2019-02-18T12:38:06Z" duration-ms="39631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserlaunch -->
-        <test-method signature="checkvalidation()[pri:2, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:18Z" name="checkvalidation" finished-at="2019-02-11T10:49:18Z" duration-ms="436" status="FAIL">
+        <test-method signature="checkvalidation()[pri:2, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:06Z" name="checkvalidation" finished-at="2019-02-18T12:38:08Z" duration-ms="1192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkvalidation -->
+        <test-method signature="companyname()[pri:3, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:08Z" name="companyname" finished-at="2019-02-18T12:38:10Z" duration-ms="2493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- companyname -->
+        <test-method signature="lastnamereal()[pri:4, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:10Z" name="lastnamereal" finished-at="2019-02-18T12:38:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lastnamereal -->
+        <test-method signature="firstnamereal()[pri:5, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:11Z" name="firstnamereal" finished-at="2019-02-18T12:38:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstnamereal -->
+        <test-method signature="ph_number_real()[pri:6, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:11Z" name="ph_number_real" finished-at="2019-02-18T12:38:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ph_number_real -->
+        <test-method signature="email_real()[pri:7, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:11Z" name="email_real" finished-at="2019-02-18T12:38:14Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- email_real -->
+        <test-method signature="password_real()[pri:8, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:14Z" name="password_real" finished-at="2019-02-18T12:38:17Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- password_real -->
+        <test-method signature="confirm_password_real()[pri:9, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:17Z" name="confirm_password_real" finished-at="2019-02-18T12:38:19Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confirm_password_real -->
+        <test-method signature="checkbox()[pri:10, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:19Z" name="checkbox" finished-at="2019-02-18T12:38:27Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="7853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkbox -->
+        <test-method signature="yopmail()[pri:11, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:38:27Z" name="yopmail" finished-at="2019-02-18T12:39:28Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="60723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- yopmail -->
+        <test-method signature="admin()[pri:12, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:28Z" name="admin" finished-at="2019-02-18T12:39:29Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- admin -->
+        <test-method signature="position()[pri:13, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:29Z" name="position" finished-at="2019-02-18T12:39:33Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- position -->
+        <test-method signature="submit()[pri:14, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:33Z" name="submit" finished-at="2019-02-18T12:39:36Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submit -->
+        <test-method signature="enter_only_position()[pri:15, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:36Z" name="enter_only_position" finished-at="2019-02-18T12:39:38Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enter_only_position -->
+        <test-method signature="enter_only_positioncode()[pri:16, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:38Z" name="enter_only_positioncode" finished-at="2019-02-18T12:39:39Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enter_only_positioncode -->
+        <test-method signature="add_samevalue_position()[pri:17, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:39Z" name="add_samevalue_position" finished-at="2019-02-18T12:39:44Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4621" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Field can not be blank.] but found [このフィールドは必須です。]]]>
+              <![CDATA[expected [×
+Position created successfully] but found [×
+Position created successfully]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Field can not be blank.] but found [このフィールドは必須です。]
+              <![CDATA[java.lang.AssertionError: expected [×
+Position created successfully] but found [×
+Position created successfully]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at src.Wfs_automation.checkvalidation(Wfs_automation.java:50)
+at src.automation_position.add_samevalue_position(automation_position.java:429)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,19 +119,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkvalidation -->
-        <test-method signature="companyname()[pri:3, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:18Z" name="companyname" finished-at="2019-02-11T10:49:21Z" duration-ms="2616" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- companyname -->
-        <test-method signature="lastnamereal()[pri:6, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="lastnamereal" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        </test-method> <!-- add_samevalue_position -->
+        <test-method signature="delete_position()[pri:18, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:44Z" name="delete_position" finished-at="2019-02-18T12:39:46Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1536" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Method Wfs_automation.lastnamereal()[pri:6, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
+              <![CDATA[expected [×
+Position created successfully] but found [×
+Position deleted successfully]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.lastnamereal()[pri:6, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+              <![CDATA[java.lang.AssertionError: expected [×
+Position created successfully] but found [×
+Position deleted successfully]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at src.automation_position.delete_position(automation_position.java:452)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -87,600 +165,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- lastnamereal -->
-        <test-method signature="ph_number_real()[pri:15, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="ph_number_real" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.ph_number_real()[pri:15, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.ph_number_real()[pri:15, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- delete_position -->
+        <test-method signature="real_position()[pri:19, instance:src.automation_position@7494f96a]" started-at="2019-02-18T12:39:46Z" name="real_position" finished-at="2019-02-18T12:40:04Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="18766" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ph_number_real -->
-        <test-method signature="firstnamereal()[pri:9, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="firstnamereal" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.firstnamereal()[pri:9, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.firstnamereal()[pri:9, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstnamereal -->
-        <test-method signature="email_real()[pri:20, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="email_real" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.email_real()[pri:20, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.email_real()[pri:20, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- email_real -->
-        <test-method signature="password_real()[pri:25, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="password_real" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.password_real()[pri:25, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.password_real()[pri:25, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- password_real -->
-        <test-method signature="confirm_password_real()[pri:30, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="confirm_password_real" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.confirm_password_real()[pri:30, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.confirm_password_real()[pri:30, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirm_password_real -->
-        <test-method signature="checkbox()[pri:31, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="checkbox" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.checkbox()[pri:31, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.checkbox()[pri:31, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkbox -->
-        <test-method signature="yopmail()[pri:32, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="yopmail" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.yopmail()[pri:32, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.yopmail()[pri:32, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- yopmail -->
-        <test-method signature="admin()[pri:33, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="admin" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.admin()[pri:33, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.admin()[pri:33, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- admin -->
-        <test-method signature="department()[pri:34, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="department" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.checkvalidation" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.department()[pri:34, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.department()[pri:34, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- department -->
-        <test-method signature="department_submit()[pri:35, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="department_submit" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.department_submit()[pri:35, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.department_submit()[pri:35, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- department_submit -->
-        <test-method signature="department_name()[pri:36, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="department_name" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.department_name()[pri:36, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.department_name()[pri:36, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- department_name -->
-        <test-method signature="departmenttcode()[pri:37, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="departmenttcode" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.departmenttcode()[pri:37, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.departmenttcode()[pri:37, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- departmenttcode -->
-        <test-method signature="dept_real()[pri:38, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="dept_real" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.dept_real()[pri:38, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.dept_real()[pri:38, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dept_real -->
-        <test-method signature="dept_edit()[pri:39, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="dept_edit" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.dept_edit()[pri:39, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.dept_edit()[pri:39, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dept_edit -->
-        <test-method signature="dept_B_delete()[pri:41, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="dept_B_delete" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.dept_B_delete()[pri:41, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.dept_B_delete()[pri:41, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dept_B_delete -->
-        <test-method signature="parent_dept()[pri:40, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="parent_dept" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.parent_dept()[pri:40, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.parent_dept()[pri:40, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- parent_dept -->
-        <test-method signature="dept_csv()[pri:42, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="dept_csv" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.dept_csv()[pri:42, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.dept_csv()[pri:42, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dept_csv -->
-        <test-method signature="dept_csv_samedata()[pri:42, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="dept_csv_samedata" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.dept_csv_samedata()[pri:42, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.dept_csv_samedata()[pri:42, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dept_csv_samedata -->
-        <test-method signature="dept_csv_samenddiff()[pri:43, instance:src.Wfs_automation@445b295b]" started-at="2019-02-11T10:49:21Z" name="dept_csv_samenddiff" finished-at="2019-02-11T10:49:21Z" depends-on-methods="src.Wfs_automation.department" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Wfs_automation.dept_csv_samenddiff()[pri:43, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Wfs_automation.dept_csv_samenddiff()[pri:43, instance:src.Wfs_automation@445b295b] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dept_csv_samenddiff -->
-      </class> <!-- src.Wfs_automation -->
+        </test-method> <!-- real_position -->
+      </class> <!-- src.automation_position -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
