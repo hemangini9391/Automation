@@ -1,179 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="19" passed="17" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-18T13:24:08Z" name="Default suite" finished-at="2019-02-18T13:27:03Z" duration-ms="175106">
+  <suite started-at="2019-02-19T07:48:07Z" name="Default suite" finished-at="2019-02-19T07:48:28Z" duration-ms="21031">
     <groups>
     </groups>
-    <test started-at="2019-02-18T13:24:08Z" name="Default test" finished-at="2019-02-18T13:27:03Z" duration-ms="175106">
-      <class name="src.automation_position">
-        <test-method signature="browserlaunch()[pri:1, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:08Z" name="browserlaunch" finished-at="2019-02-18T13:24:49Z" duration-ms="40502" status="PASS">
+    <test started-at="2019-02-19T07:48:07Z" name="Default test" finished-at="2019-02-19T07:48:28Z" duration-ms="21031">
+      <class name="src.NewTest">
+        <test-method signature="Browserlaunch()[pri:1, instance:src.NewTest@33c911a1]" started-at="2019-02-19T07:48:07Z" name="Browserlaunch" finished-at="2019-02-19T07:48:17Z" duration-ms="9820" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserlaunch -->
-        <test-method signature="checkvalidation()[pri:2, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:49Z" name="checkvalidation" finished-at="2019-02-18T13:24:50Z" duration-ms="1293" status="PASS">
+        </test-method> <!-- Browserlaunch -->
+        <test-method signature="file()[pri:2, instance:src.NewTest@33c911a1]" started-at="2019-02-19T07:48:17Z" name="file" finished-at="2019-02-19T07:48:28Z" duration-ms="11112" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkvalidation -->
-        <test-method signature="companyname()[pri:3, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:50Z" name="companyname" finished-at="2019-02-18T13:24:53Z" duration-ms="2579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- companyname -->
-        <test-method signature="lastnamereal()[pri:4, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:53Z" name="lastnamereal" finished-at="2019-02-18T13:24:53Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lastnamereal -->
-        <test-method signature="firstnamereal()[pri:5, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:53Z" name="firstnamereal" finished-at="2019-02-18T13:24:54Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firstnamereal -->
-        <test-method signature="ph_number_real()[pri:6, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:54Z" name="ph_number_real" finished-at="2019-02-18T13:24:54Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ph_number_real -->
-        <test-method signature="email_real()[pri:7, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:54Z" name="email_real" finished-at="2019-02-18T13:24:57Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2893" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- email_real -->
-        <test-method signature="password_real()[pri:8, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:24:57Z" name="password_real" finished-at="2019-02-18T13:25:00Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2505" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- password_real -->
-        <test-method signature="confirm_password_real()[pri:9, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:25:00Z" name="confirm_password_real" finished-at="2019-02-18T13:25:02Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2549" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- confirm_password_real -->
-        <test-method signature="checkbox()[pri:10, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:25:02Z" name="checkbox" finished-at="2019-02-18T13:25:11Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="8797" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkbox -->
-        <test-method signature="yopmail()[pri:11, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:25:11Z" name="yopmail" finished-at="2019-02-18T13:26:15Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="64242" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- yopmail -->
-        <test-method signature="admin()[pri:12, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:15Z" name="admin" finished-at="2019-02-18T13:26:16Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="979" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- admin -->
-        <test-method signature="position()[pri:13, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:16Z" name="position" finished-at="2019-02-18T13:26:21Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4681" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- position -->
-        <test-method signature="submit()[pri:14, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:21Z" name="submit" finished-at="2019-02-18T13:26:24Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="2950" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submit -->
-        <test-method signature="enter_only_position()[pri:15, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:24Z" name="enter_only_position" finished-at="2019-02-18T13:26:25Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enter_only_position -->
-        <test-method signature="enter_only_positioncode()[pri:16, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:25Z" name="enter_only_positioncode" finished-at="2019-02-18T13:26:27Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1687" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enter_only_positioncode -->
-        <test-method signature="add_samevalue_position()[pri:17, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:27Z" name="add_samevalue_position" finished-at="2019-02-18T13:26:32Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="4709" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [×
-Position created successfully] but found [×
-Position created successfully]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [×
-Position created successfully] but found [×
-Position created successfully]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at src.automation_position.add_samevalue_position(automation_position.java:429)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_samevalue_position -->
-        <test-method signature="delete_position()[pri:18, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:32Z" name="delete_position" finished-at="2019-02-18T13:26:33Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="1560" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [×
-Position created successfully] but found [×
-Position deleted successfully]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [×
-Position created successfully] but found [×
-Position deleted successfully]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at src.automation_position.delete_position(automation_position.java:452)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete_position -->
-        <test-method signature="real_position()[pri:19, instance:src.automation_position@7494f96a]" started-at="2019-02-18T13:26:33Z" name="real_position" finished-at="2019-02-18T13:27:03Z" depends-on-methods="src.automation_position.checkvalidation" duration-ms="30037" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- real_position -->
-      </class> <!-- src.automation_position -->
+        </test-method> <!-- file -->
+      </class> <!-- src.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
