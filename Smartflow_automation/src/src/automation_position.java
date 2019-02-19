@@ -281,7 +281,7 @@ public class automation_position {
 	   public void position()throws InterruptedException  
 	   {
 		 
-		 //click on department
+		 //click on position
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div[3]/div/div[1]/span/a")).click();
 		 Thread.sleep(2000);
 		 

@@ -34,7 +34,6 @@ public class Wfs_automation {
           
 		}
 	
-	
 //--------------------------------------click on submit with blank value  ----------------------------------------//
 
 @Test(priority=2)
@@ -428,7 +427,7 @@ public class Wfs_automation {
 			 
 			   // method for send email randomly
 				 Random r =new Random();
-				 String email ="User"+r.nextInt(1000)+"@yopmail.com";
+				 String email ="Userr"+r.nextInt(1000)+"@yopmail.com";
 				 //System.out.println(email);
 				 email_real.sendKeys(email);
 			     Thread.sleep(2000);
@@ -855,7 +854,7 @@ public void dept_edit() throws InterruptedException
 		 
 		 
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/a")).click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 	   
 }
 
@@ -876,7 +875,7 @@ public void parent_dept()throws InterruptedException
 	 
   driver.findElement(By.name("code")).clear();
   driver.findElement(By.name("code")).sendKeys("3");
-  Thread.sleep(2000);
+  Thread.sleep(3000);
   
   // select parent department 
   
@@ -885,15 +884,14 @@ public void parent_dept()throws InterruptedException
  
 	 
   driver.findElement(By.id("textArea")).sendKeys("This is a1 department");
-  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
+  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button/span")).click();
   Thread.sleep(2000);
   
 }
 
 
 
-//------------------------------- Enter B department-----------------------------------------------------------------------//
-
+//------------------------------- Enter B department with parent and delete----------------------------------------//
 
 
 @Test(priority=41 , dependsOnMethods = "department")
@@ -915,7 +913,7 @@ public void dept_B_delete()throws InterruptedException
 	 
      driver.findElement(By.id("textArea")).sendKeys("This is B department");
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-	 Thread.sleep(2000);
+	 Thread.sleep(3000);
 	 
 	 
 	 //enter b1 with parent dept
@@ -939,7 +937,7 @@ public void dept_B_delete()throws InterruptedException
 		 
 	  driver.findElement(By.id("textArea")).sendKeys("This is b1 department");
 	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-	  Thread.sleep(2000);
+	  Thread.sleep(3000);
 	 
 	  // delete B dept
 	  
@@ -967,7 +965,7 @@ public void dept_B_delete()throws InterruptedException
 	    
 }
 
-//--------------------------------------------------Enter C,D,E  department----------------------------------------//
+//--------------------------------------------------Enter C,D,E  department----------------------------------------------------------//
 
 @Test(priority=42 , dependsOnMethods = "department")
 
@@ -986,7 +984,7 @@ public void dept_c_dept()throws InterruptedException
 	 driver.findElement(By.name("code")).sendKeys("04");
 	 Thread.sleep(2000);
 	 
-     driver.findElement(By.id("textArea")).sendKeys("This is B department");
+     driver.findElement(By.id("textArea")).sendKeys("This is c department");
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
 	 Thread.sleep(2000);
 	 
@@ -1042,113 +1040,336 @@ public void dept_c_dept()throws InterruptedException
 		 
 	     driver.findElement(By.id("textArea")).sendKeys("This is B department");
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-		 Thread.sleep(2000);
+		 Thread.sleep(4000);
 		
 }
 
+//-------------------------------------Csv download---------------------------------------------------------------------//
 
-
-//-----------------------------------------department upload using blank csv---------------------------------------------------// 
-
-
-//@Test(priority=43 , dependsOnMethods = "department")
-//
-//   public void dept_csv() throws InterruptedException
-//   {
-//   //  blank csv upload
-//	
-//      driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-//      WebElement uploadElement = driver.findElement(By.id("upload"));
-//      uploadElement.sendKeys("‪C:\\Users\\rising1\\Desktop\\sample_department_list (2).csv");
-//      driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
-//      Thread.sleep(2000);
-//      
-//      
-//      String alert_msg = driver.findElement(By.className("alertOut")).getText();
-//      System.out.println("Alert Box message: " + alert_msg);
-//      String alert_msg_real="×\n" + "Please Check CSV Sample data file.";
-//      Assert.assertEquals(alert_msg, alert_msg_real);
-//      
-//      
-//}
-
-
-//--------------------------------------department csv upload with same above data--------------------------------------------//
-
-
-//@Test(priority=44 , dependsOnMethods = "department")
-//
-//public void dept_csv_samedata() throws InterruptedException
-//{
-//   Thread.sleep(1000);
-//   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-//   WebElement uploadElements = driver.findElement(By.id("upload"));
-//   uploadElements.sendKeys("‪E:\\dept automation file\\sd.csv");
-//   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
-//   Thread.sleep(2000);
-//   
-//   
-//   String alert_msg11 = driver.findElement(By.className("alertOut")).getText();
-//   System.out.println("Alert Box message: " + alert_msg11);
-//   String alert_msg_real1="×\n" + "コードは既に登録済です。新しいコードを入力して下さい。";
-//   Assert.assertEquals(alert_msg11, alert_msg_real1);
-//   
-//}
-//------------------------------department csv upload with same and different data----------------------------------//
-
-//@Test(priority=45 , dependsOnMethods = "department")
-//
-//public void dept_csv_samenddiff() throws InterruptedException
-//{
-////  blank csv upload
-//	
-//   Thread.sleep(1000);
-//   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-//   WebElement uploadElementsd = driver.findElement(By.id("upload"));
-//   uploadElementsd.sendKeys("‪E:\\dept automation file\\s.csv");
-//   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
-//   Thread.sleep(2000);
-//   
-//   
-//   String alert_msg111 = driver.findElement(By.className("alertOut")).getText();
-//   System.out.println("Alert Box message: " + alert_msg111);
-//   String alert_msg_real11="×\n" + "コードは既に登録済です。新しいコードを入力して下さい。";
-//   Assert.assertEquals(alert_msg111, alert_msg_real11);
-//}
-
-//--------------------------------------------real csv-----------------------------------------------------------------//
-
-@Test(priority=46 , dependsOnMethods = "department")
-
-public void dept_csv_real() throws InterruptedException
-{
-
-	
-// Thread.sleep(1000);
-	
-   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[1]")).click();
-   WebElement uploadElementreal = driver.findElement(By.id("upload"));
-   uploadElementreal.sendKeys("E:/dept automation file/real.csv");
-   Thread.sleep(2000);
-   driver.findElement(By.xpath("//*[@id=\"csv-upload\"]/div/div/div[3]/button")).click();
+@Test (priority=47 , dependsOnMethods = "checkvalidation")
+public void dept_download() throws InterruptedException
+ {
+  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]")).click();
+  Thread.sleep(3000);
   
-   Thread.sleep(2000);
-   String alert_msg1111 = driver.findElement(By.className("alertOut")).getText();
-   System.out.println("Alert Box message: " + alert_msg1111);
-   String alert_msg_real111= "×\n" + "コードは既に登録済です。新しいコードを入力して下さい。";
-   Assert.assertEquals(alert_msg1111, alert_msg_real111);
+  driver.findElement(By.xpath("//*[@id=\"admin-step\"]/a")).click();
+  driver.findElement(By.xpath("//*[@id=\"admin-step\"]/ul/li[1]/a")).click();
+  Thread.sleep(3000);
+  }
+
+
+//------------------------------------position start --------------------------------------------------//
+@Test(priority=48 , dependsOnMethods = "checkvalidation")
+
+		public void position()throws InterruptedException  
+		{
+			 
+			//click on position
+			driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div[3]/div/div[1]/span/a")).click();
+			Thread.sleep(2000);
+			 
+		    //enter value in search box
+			driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/div/input")).sendKeys("testing");
+			Thread.sleep(1000);
+			
+			// output search result
+			String search_msg =	driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/table/tbody/tr/td")).getText();
+			String search_message = "No Position list Found";
+			Assert.assertEquals(search_msg, search_message);
+			
+			// remove search result
+		  
+		    driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/div/input")).clear();
+		    
+		    
 }
 
 
-@Test
-public void dept_download()
-{
-  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]")).click();
+//-------------------------------------------------check validation-------------------------------------------------//
+
+// check validation without adding any position value
+@Test(priority=49 , dependsOnMethods = "checkvalidation")
+
+		public void submit()throws InterruptedException  
+		{
+			 //click on add symbol
+			 
+			 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
+			 Thread.sleep(1000);
+			 
+			 // click on submit and check validation
+			 driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+			 
+			 
+			// validation for position name
+			String val1= driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/span[1]/span")).getText();
+			String rval1 = "Position name is required";
+			Assert.assertEquals(val1, rval1);
+			
+			// validation for postion code
+			
+			String val2=	driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/span[1]/span")).getText();
+			String rval2 = "Position Code is required";
+			Assert.assertEquals(val2, rval2);
+			Thread.sleep(1000);
 	
 }
 
+//------------------------------------check validation when add only position name---------------------------------//
 
-//------------------------------------department ending------------------------------------------------------------//
+@Test(priority=50 , dependsOnMethods = "checkvalidation")
+
+		public void enter_only_position()throws InterruptedException  
+		{
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("a");
+			 
+			// click on submit and check validation
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+			Thread.sleep(1000);
+			 
+			
+			// validation for position code
+			
+			String val3=	driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/span[1]/span")).getText();
+			String rval3 = "Position Code is required";
+			Assert.assertEquals(val3, rval3);
+			
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).clear();
+		
+	}
+//-------------check validation when add only position name------------------------------------------------//
+
+@Test(priority=51 , dependsOnMethods = "checkvalidation")
+
+		public void enter_only_positioncode()throws InterruptedException  
+		{
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("02");
+			 
+			// click on submit and check validation
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+			Thread.sleep(1000);
+			 
+			// validation for position name
+			String val4=	driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/span[1]/span")).getText();
+			String rval4 = "Position name is required";
+			Assert.assertEquals(val4, rval4);
+			
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).clear();
+	}
+
+//----------------------------check validation when add same value------------------------------------------------//
+
+@Test(priority=52 , dependsOnMethods = "checkvalidation")
+
+	public void add_samevalue_position()throws InterruptedException  
+	{
+	    // code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("01");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("unassigned");
+		 
+		// click on submit and check validation
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(1000);
+		 
+		// validation for position name
+		String val5= driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/span[2]")).getText();
+		String rval5 = "Name already exists.";
+		Assert.assertEquals(val5, rval5);
+		
+		//validation for position code
+		
+		String val6= driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/span[2]")).getText();
+		String rval6 = "Position Code already exists.";
+		Assert.assertEquals(val6, rval6);	
+		
+		
+		//clear added value and add new one
+		 
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).clear();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).clear();
+		
+		
+		// code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("1");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("a");
+		
+		 // select parent department 
+		  
+		Select parent_dept = new Select(driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[3]/div/select")));
+		parent_dept.selectByVisibleText("unassigned");
+		 
+		// click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(1000);
+		
+		//verify alert message
+		String alert_position_message =	driver.findElement(By.className("alertOut")).getText();
+		String real_alert_position_message = "×\r\n" + 
+				"Position created successfully";
+		System.out.println(real_alert_position_message);
+
+		Assert.assertEquals(alert_position_message,real_alert_position_message );
+	}	
+
+
+//-----------------------------------delete position---------------------------------------------------//
+
+@Test(priority=53 , dependsOnMethods = "checkvalidation")
+
+		public void delete_position()throws InterruptedException  
+		{
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/table/tbody/tr[2]/td[4]/span/i")).click();
+			
+			
+			// alert accept
+		driver.switchTo().alert().accept();
+		Thread.sleep(1000);
+		
+		// verify alert message
+		
+		String alert_position_message1 =	driver.findElement(By.className("alertOut")).getText();
+		String real_alert_position_message1 = "×\r\n" + "Position created successfully";
+		System.out.println(real_alert_position_message1);
+		Assert.assertEquals(alert_position_message1,real_alert_position_message1 );
+   
+}
+
+//----------------------------------------------add real position-------------------------------------------//
+@Test(priority=54 , dependsOnMethods = "checkvalidation")
+
+		public void real_position()throws InterruptedException  
+		{
+		                               //a position
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		
+		//click on add symbol
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
+		Thread.sleep(1000);
+		
+		//code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("1");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("a");
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		
+		                            //b position
+		//click on add symbol
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
+		Thread.sleep(1000);
+		
+		//code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("2");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("b");
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		
+		                           //c position
+		
+		//click on add symbol
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
+		Thread.sleep(1000);
+		
+		//code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("3");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("c");
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(1000);
+		
+		
+		                             //d position
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		//click on add symbol
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
+		Thread.sleep(1000);
+		
+		//code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("4");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("d");
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(2000);
+		
+		                            //e position
+		
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		//click on add symbol
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
+		Thread.sleep(1000);
+		
+		//code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("5");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("e");
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
+		
+		
+		//-------------------------------check validation while editing-------------------------------------------------//
+		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/table/tbody/tr[6]/td[2]/a")).click();
+		Thread.sleep(2000);
+		
+		//name
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).clear();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("d");
+		Thread.sleep(1000);
+		
+		//code
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).clear();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("4");
+		Thread.sleep(1000);
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(2000);
+		
+		// validation for position name
+		String val7= driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/span[2]")).getText();
+		String rval7 = "Name already exists.";
+		Assert.assertEquals(val7, rval7);
+					
+		//validation for position code
+					
+		String val8= driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/span[2]")).getText();
+		String rval8 = "Position Code already exists.";
+		Assert.assertEquals(val8, rval8);	
+		Thread.sleep(1000);
+		
+		
+		// clear both value
+		
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).clear();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).clear();
+		
+		//code value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("5");
+		// name value
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("e");
+		
+		//click on submit
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
+		Thread.sleep(2000);
+
+}
 
 }
 
