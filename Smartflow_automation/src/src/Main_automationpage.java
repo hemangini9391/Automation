@@ -802,9 +802,68 @@ public void dept_download() throws InterruptedException
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
 	     Thread.sleep(8000);    
 }
+  //user test
+@Test(priority=27, dependsOnMethods ="checkvalidation")
+		public void Enter_user2_test() throws InterruptedException
+		{
+		
+		 //click on add user
+		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button")).click();
+		 Thread.sleep(7000); 
+		
+		 //Enter last name
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
+		 Thread.sleep(1000);
+		 
+		 //Enter first name
+		 
+		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("test");
+		Thread.sleep(8000);
+		
+		// Enter Employee id
+		
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("tK1");
+		Thread.sleep(1000);
+		
+		// Enter valid email (This is random email method)
+		
+		// method for send email randomly
+		
+		 Random r =new Random();
+		 String email12 ="testrt"+r.nextInt(7000)+"@yopmail.com";
+		 //System.out.println(email);
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email12);
+		 Thread.sleep(2000);
+		
+		// select category superadmin/admin/normal user
+		
+		 Select dropdown  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
+		 dropdown.selectByVisibleText("Super Admin");
+		 Thread.sleep(2000);
+		 	 
+		 // select checkbox
+		 //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+		 Thread.sleep(500);
+		 
+		 
+		 //click on submit
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+	     Thread.sleep(500);
+	     
+	     String payment_alert = driver.findElement(By.className("alert")).getText();
+		 System.out.println(payment_alert);
+	     
+		 // click on cancel
+		 
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[2]")).click();
+
+}
+
+// user chandni edit
 
 @Test(priority=27, dependsOnMethods ="checkvalidation")
-public void user_edit() throws InterruptedException
+public void user_chandni_edit() throws InterruptedException
 
 {
   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div[1]/div/div[2]/div/div[3]/div[2]/table/tbody/tr[1]/td[8]/a")).click();
