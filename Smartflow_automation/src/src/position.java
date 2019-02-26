@@ -278,7 +278,7 @@ public class position {
    
  @Test(priority=13 , dependsOnMethods = "checkvalidation")
    
-	   public void position()throws InterruptedException  
+	   public void position1()throws InterruptedException  
 	   {
 		 
 		 //click on position

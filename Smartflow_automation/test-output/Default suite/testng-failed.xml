@@ -5,16 +5,10 @@
     <classes>
       <class name="src.Main_automationpage">
         <methods>
-          <include name="Enter_user_2"/>
-          <include name="checkbox_validation"/>
           <include name="checkvalidation"/>
-          <include name="User_registarion"/>
-          <include name="real_position"/>
-          <include name="User_submit"/>
+          <include name="parent_dept"/>
           <include name="department"/>
-          <include name="position"/>
-          <include name="dept_c_dept"/>
-          <include name="dept_download"/>
+          <include name="user_edit"/>
         </methods>
       </class> <!-- src.Main_automationpage -->
     </classes>

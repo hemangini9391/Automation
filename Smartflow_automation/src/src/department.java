@@ -264,7 +264,7 @@ public class department {
    
  @Test(priority=13 , dependsOnMethods = "checkvalidation")
    
-   public void department()throws InterruptedException  
+   public void department1()throws InterruptedException  
    {
 	 //click on department
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div[2]/div/div[1]/span/a")).click();
