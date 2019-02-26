@@ -3,12 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="src.automation_user">
+      <class name="src.Main_automationpage">
         <methods>
-          <include name="User_submit"/>
+          <include name="Enter_user_2"/>
+          <include name="checkbox_validation"/>
           <include name="checkvalidation"/>
+          <include name="User_registarion"/>
+          <include name="real_position"/>
+          <include name="User_submit"/>
+          <include name="department"/>
+          <include name="position"/>
+          <include name="dept_c_dept"/>
+          <include name="dept_download"/>
         </methods>
-      </class> <!-- src.automation_user -->
+      </class> <!-- src.Main_automationpage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,134 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="13" failed="1" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-19T13:26:59Z" name="Default suite" finished-at="2019-02-19T13:29:08Z" duration-ms="128457">
+  <suite started-at="2019-02-26T10:21:34Z" name="Default suite" finished-at="2019-02-26T10:25:15Z" duration-ms="220675">
     <groups>
     </groups>
-    <test started-at="2019-02-19T13:26:59Z" name="Default test" finished-at="2019-02-19T13:29:08Z" duration-ms="128457">
-      <class name="src.automation_user">
-        <test-method signature="browserlaunch()[pri:1, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:26:59Z" name="browserlaunch" finished-at="2019-02-19T13:27:39Z" duration-ms="40042" status="PASS">
+    <test started-at="2019-02-26T10:21:34Z" name="Default test" finished-at="2019-02-26T10:25:15Z" duration-ms="220675">
+      <class name="src.User_registration">
+        <test-method signature="browserlaunch()[pri:1, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:21:34Z" name="browserlaunch" finished-at="2019-02-26T10:22:46Z" duration-ms="72287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserlaunch -->
-        <test-method signature="checkvalidation()[pri:2, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:40Z" name="checkvalidation" finished-at="2019-02-19T13:27:40Z" duration-ms="630" status="PASS">
+        <test-method signature="checkvalidation()[pri:2, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:46Z" name="checkvalidation" finished-at="2019-02-26T10:22:48Z" duration-ms="1213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkvalidation -->
-        <test-method signature="companyname()[pri:3, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:40Z" name="companyname" finished-at="2019-02-19T13:27:42Z" duration-ms="2323" status="PASS">
+        <test-method signature="companyname()[pri:3, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:48Z" name="companyname" finished-at="2019-02-26T10:22:50Z" duration-ms="2537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- companyname -->
-        <test-method signature="lastnamereal()[pri:4, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:42Z" name="lastnamereal" finished-at="2019-02-19T13:27:43Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="203" status="PASS">
+        <test-method signature="lastnamereal()[pri:4, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:50Z" name="lastnamereal" finished-at="2019-02-26T10:22:51Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lastnamereal -->
-        <test-method signature="firstnamereal()[pri:5, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:43Z" name="firstnamereal" finished-at="2019-02-19T13:27:43Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="237" status="PASS">
+        <test-method signature="firstnamereal()[pri:5, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:51Z" name="firstnamereal" finished-at="2019-02-26T10:22:51Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstnamereal -->
-        <test-method signature="ph_number_real()[pri:6, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:43Z" name="ph_number_real" finished-at="2019-02-19T13:27:43Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="232" status="PASS">
+        <test-method signature="ph_number_real()[pri:6, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:51Z" name="ph_number_real" finished-at="2019-02-26T10:22:52Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ph_number_real -->
-        <test-method signature="email_real()[pri:7, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:43Z" name="email_real" finished-at="2019-02-19T13:27:46Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="2474" status="PASS">
+        <test-method signature="email_real()[pri:7, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:52Z" name="email_real" finished-at="2019-02-26T10:22:54Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="2883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- email_real -->
-        <test-method signature="password_real()[pri:8, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:46Z" name="password_real" finished-at="2019-02-19T13:27:48Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="2650" status="PASS">
+        <test-method signature="password_real()[pri:8, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:54Z" name="password_real" finished-at="2019-02-26T10:22:57Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="2546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- password_real -->
-        <test-method signature="confirm_password_real()[pri:9, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:48Z" name="confirm_password_real" finished-at="2019-02-19T13:27:51Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="2518" status="PASS">
+        <test-method signature="confirm_password_real()[pri:9, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:22:57Z" name="confirm_password_real" finished-at="2019-02-26T10:23:00Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="2551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confirm_password_real -->
-        <test-method signature="checkbox()[pri:10, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:51Z" name="checkbox" finished-at="2019-02-19T13:27:58Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="7225" status="PASS">
+        <test-method signature="checkbox()[pri:10, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:23:00Z" name="checkbox" finished-at="2019-02-26T10:23:09Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="9148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkbox -->
-        <test-method signature="yopmail()[pri:11, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:27:58Z" name="yopmail" finished-at="2019-02-19T13:29:01Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="63127" status="PASS">
+        <test-method signature="yopmail()[pri:11, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:23:09Z" name="yopmail" finished-at="2019-02-26T10:24:45Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="95954" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- yopmail -->
-        <test-method signature="admin()[pri:12, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:29:01Z" name="admin" finished-at="2019-02-19T13:29:02Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="515" status="PASS">
+        <test-method signature="admin()[pri:12, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:24:45Z" name="admin" finished-at="2019-02-26T10:24:46Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="1003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- admin -->
-        <test-method signature="position()[pri:13, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:29:02Z" name="position" finished-at="2019-02-19T13:29:08Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="5928" status="PASS">
+        <test-method signature="position()[pri:13, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:24:46Z" name="position" finished-at="2019-02-26T10:24:53Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="6960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- position -->
-        <test-method signature="User_submit()[pri:14, instance:src.automation_user@7ee8290b]" started-at="2019-02-19T13:29:08Z" name="User_submit" finished-at="2019-02-19T13:29:08Z" depends-on-methods="src.automation_user.checkvalidation" duration-ms="277" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: Element <button ng-if="!lineWorksEmailExists" type="submit" ng-click="submitted=false" class="btn btn-raised btn-sm btn-primary ng-scope">...</button> is not clickable at point (89, 599). Other element would receive the click: <iframe title="Opens a widget where you can find more information" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, top, bottom; opacity: 1; width: 113px; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; left: 0px; bottom: 0px;"></iframe>
-  (Session info: chrome=72.0.3626.109)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:08.638Z'
-System info: host: 'RISING', ip: '192.168.2.7', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '10.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\rising1\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53498}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.109, webStorageEnabled: true}
-Session ID: c1d017628d0e32ad347da178f772a0f0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button ng-if="!lineWorksEmailExists" type="submit" ng-click="submitted=false" class="btn btn-raised btn-sm btn-primary ng-scope">...</button> is not clickable at point (89, 599). Other element would receive the click: <iframe title="Opens a widget where you can find more information" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: none; background: transparent; z-index: 999998; transform: translateZ(0px); position: fixed; transition: opacity 250ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, top, bottom; opacity: 1; width: 113px; height: 50px; max-height: 551px; min-height: 50px; margin: 10px 20px; left: 0px; bottom: 0px;"></iframe>
-  (Session info: chrome=72.0.3626.109)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:33:08.638Z'
-System info: host: 'RISING', ip: '192.168.2.7', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '10.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\rising1\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53498}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.109, webStorageEnabled: true}
-Session ID: c1d017628d0e32ad347da178f772a0f0
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at src.automation_user.User_submit(automation_user.java:298)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method signature="User_submit()[pri:14, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:24:53Z" name="User_submit" finished-at="2019-02-26T10:24:58Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="5185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- User_submit -->
-      </class> <!-- src.automation_user -->
+        <test-method signature="checkbox_validation()[pri:14, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:24:58Z" name="checkbox_validation" finished-at="2019-02-26T10:25:02Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="3725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkbox_validation -->
+        <test-method signature="Enter_user_2()[pri:15, instance:src.User_registration@192c3f1e]" started-at="2019-02-26T10:25:02Z" name="Enter_user_2" finished-at="2019-02-26T10:25:15Z" depends-on-methods="src.User_registration.checkvalidation" duration-ms="13200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Enter_user_2 -->
+      </class> <!-- src.User_registration -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

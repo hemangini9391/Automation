@@ -11,7 +11,7 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.awt.datatransfer.StringSelection;
 
-public class NewTest {
+public class Csv_upload_test {
 	
 	Robot robot;
 	WebDriver driver ;

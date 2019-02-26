@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 //import org.openqa.selenium.support.ui.Select;
 
 
-public class automation_position {
+public class position {
 	
 	WebDriver driver ;
  	

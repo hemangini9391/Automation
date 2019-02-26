@@ -10,13 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-//import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Select;
 
-
-public class automation_user {
+public class User_registration {
 	
 	WebDriver driver ;
- 	
 //--------------------------------------browser_launch---------------------------------------------------------//
 	
 @Test(priority=1)
@@ -31,7 +29,6 @@ public class automation_user {
 			driver.findElement(By.linkText("新規登録")).click();
 			driver.manage().window().maximize();
 			driver.findElement(By.xpath("//*[@id=\"twblock\"]/a/label")).click();
-          
 		}
 //--------------------------------------click on submit with blank value  ----------------------------------------//
 
@@ -271,9 +268,7 @@ public class automation_user {
 	   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[4]/div/div/div[2]/div[3]/div/div[1]/a")).click();
 	   driver.findElement(By.xpath("//*[@id=\"admin-step\"]/a")).click();
 	   driver.findElement(By.xpath("//*[@id=\"admin-step\"]/ul/li[1]/a")).click();
-
    }
-  
  //-----------------------------------------------Enter into user----------------------------------------------//
    
  @Test(priority=13 , dependsOnMethods = "checkvalidation")
@@ -294,47 +289,105 @@ public class automation_user {
  
 	   public void User_submit()throws InterruptedException  
 	   {
-	  
-		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).click();
-	     Thread.sleep(3000);
+	
+    
+	      // change i-frame for click on link 
+//		    driver.switchTo().frame("iframe"); 
+//		    driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).click();		
+//		    Thread.sleep(2000);
+	
+		   driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+	       Thread.sleep(3000);
 	     
-	     //last name validation
-	     String lastname_val_msg = driver.findElement(By.xpath("//*[@id=\"last_name-error\"]")).getText();
-	     String lastname_val_msg_real = "This field is required.";
-	     Assert.assertEquals(lastname_val_msg,lastname_val_msg_real);
+	       //last name validation
+	       String lastname_val_msg = driver.findElement(By.xpath("//*[@id=\"last_name-error\"]")).getText();
+	       String lastname_val_msg_real = "This field is required.";
+	       Assert.assertEquals(lastname_val_msg,lastname_val_msg_real);
 	     
 
-	     //first name validation
-	     String firstname_val_msg = driver.findElement(By.xpath("//*[@id=\"inputDefault-error\"]")).getText();
-	     String firstname_val_msg_real = "This field is required.";
-	     Assert.assertEquals(firstname_val_msg,firstname_val_msg_real);
+	       //first name validation
+	       String firstname_val_msg = driver.findElement(By.xpath("//*[@id=\"inputDefault-error\"]")).getText();
+	       String firstname_val_msg_real = "This field is required.";
+	       Assert.assertEquals(firstname_val_msg,firstname_val_msg_real);
 	     
 
-	     //employee validation
-	     String employee_val_msg = driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid-error\"]")).getText();
-	     String employee_val_msg_real = "This field is required.";
-	     Assert.assertEquals(employee_val_msg,employee_val_msg_real);
+	       //employee validation
+	       String employee_val_msg = driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid-error\"]")).getText();
+	       String employee_val_msg_real = "This field is required.";
+	       Assert.assertEquals(employee_val_msg,employee_val_msg_real);
 	     
 	     
-	     // email validation 
-	     String email_val_msg = driver.findElement(By.xpath("//*[@id=\"m_user_login_email-error\"]")).getText();
-	     String email_val_msg_real = "This field is required.";
-	     Assert.assertEquals(email_val_msg,email_val_msg_real);
-	     
-	     //workflow and travel expense checkbox validation
-	     
-	     driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
-	     
-	     String checkbox_val = driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/span")).getText();
-	     String checkbox_val_real = "Select Any of checkbox";
-	     Assert.assertEquals(checkbox_val,checkbox_val_real);
+	       // email validation 
+	       String email_val_msg = driver.findElement(By.xpath("//*[@id=\"m_user_login_email-error\"]")).getText();
+	       String email_val_msg_real = "This field is required.";
+	       Assert.assertEquals(email_val_msg,email_val_msg_real);
+	       Thread.sleep(1000);
 	   }
+
+
+@Test(priority=14 , dependsOnMethods = "checkvalidation")
+		
+		public void checkbox_validation()throws InterruptedException  
+		{
+	     
+		//workflow and travel expense checkbox validation
+	
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();	
+		Thread.sleep(2000);
+		String checkbox_val = driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/span")).getText();
+		String checkbox_val_real = "Select Any of checkbox";
+		Assert.assertEquals(checkbox_val,checkbox_val_real);
+	    Thread.sleep(1000);
+		}
+
+
+@Test(priority=15, dependsOnMethods ="checkvalidation")
+		public void Enter_user_2() throws InterruptedException
+		{
+		
+		 //Enter last name
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
+		 Thread.sleep(1000);
+		 
+		 //Enter first name
+		 
+		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Milind");
+		Thread.sleep(1000);
+		
+		// Enter Employee id
+		
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("m1");
+		
+		//Enter invalid email
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys("chandni38@yopmail.com");
+		Thread.sleep(2000);
+		
+		String emaill_val_msg = driver.findElement(By.xpath("//*[@id=\"m_user_login_email-error\"]")).getText();
+		String emaill_val_msg_real =  "Email already registerd.";
+		Assert.assertEquals(emaill_val_msg,emaill_val_msg_real);
+		
+		// Enter valid email (This is random email method)
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).clear();
+	    // method for send email randomly
+		
+		 Random r =new Random();
+		 String email1 ="Milinnd"+r.nextInt(5000)+"@yopmail.com";
+		 //System.out.println(email);
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email1);
+         Thread.sleep(2000);
+         
+         // select category superadmin/admin/normal user
+         
+         Select dropdown  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
+ 		 dropdown.selectByVisibleText("Super Admin");
+ 		 Thread.sleep(2000);
+ 		 
+ 		 
+ 		 // select checkbox
+ 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
+ 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+         
 }
 
-
-
-
-
-
-
-
+}
+	
