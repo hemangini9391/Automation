@@ -92,7 +92,7 @@ public class Main_automationpage {
 	          {
 			    WebElement c_name = driver.findElement(By.id("m_user_login_company_name"));
 		        c_name.sendKeys("Appsense Rising");
-		        Thread.sleep(2000);
+		        Thread.sleep(500);
 		      }
 	
  //--------------------------------last name---------------------------------------------------------//
@@ -102,7 +102,7 @@ public class Main_automationpage {
 	  				WebElement l_namereal = driver.findElement(By.id("m_user_login_last_name"));
 	  				l_namereal.clear();
 	  				l_namereal.sendKeys("patel");
-			        Thread.sleep(1000);	 
+			        Thread.sleep(500);	 
 			  }
 //------------------------------------------first name -----------------------------------------------//	
 				 
@@ -112,7 +112,7 @@ public class Main_automationpage {
 	     	     WebElement l_namereal = driver.findElement(By.id("m_user_login_first_name"));
 				 l_namereal.clear();
 				 l_namereal.sendKeys("Chandni");
-			   //  Thread.sleep(2000);
+			   //  Thread.sleep(500);
 			}
  //----------------------------------------- phone number------------------------------------------------------//
   
@@ -123,7 +123,7 @@ public class Main_automationpage {
                  WebElement ph_number_real = driver.findElement(By.id("m_user_login_phone"));
 				 ph_number_real.clear();
 				 ph_number_real.sendKeys("7567630234");
-	    	     Thread.sleep(2000);
+	    	     Thread.sleep(500);
 	    	 }
  //----------------------------------------random email generate---------------------------------------------------------//
   
@@ -142,7 +142,7 @@ public class Main_automationpage {
 				 String email ="Userr"+r.nextInt(1000)+"@yopmail.com";
 				 //System.out.println(email);
 				 email_real.sendKeys(email);
-			     Thread.sleep(2000);
+			     Thread.sleep(500);
  }
   //--------------------------------------------real password------------------------------------------------------//
   
@@ -155,7 +155,7 @@ public class Main_automationpage {
 	         WebElement password_alpha = driver.findElement(By.id("m_user_login_password"));
 			 password_alpha.clear();
 			 password_alpha.sendKeys("password38");
-			 Thread.sleep(2000);
+			 Thread.sleep(500);
 		 }
 
 
@@ -169,7 +169,7 @@ public class Main_automationpage {
            WebElement confirm_password_8 = driver.findElement(By.id("m_user_login_password_confirmation"));
 		   confirm_password_8.clear();
 		   confirm_password_8.sendKeys("password38");
-		   Thread.sleep(2000);
+		   Thread.sleep(500);
     
         }
 //------------------------------------------ check box select----------------------------------------------------//
@@ -219,7 +219,7 @@ public class Main_automationpage {
 	   // change i-frame for click on link 
 	    driver.switchTo().frame("ifmail"); 
 	    driver.findElement(By.linkText("アカウントの確認")).click();		
-	    Thread.sleep(2000);
+	    Thread.sleep(500);
 	
 	    
 	   // smartflow login with real value
@@ -239,9 +239,9 @@ public class Main_automationpage {
 		// login 
 		
 		driver.findElement(By.id("m_user_login_email")).sendKeys(test);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 	    driver.findElement(By.id("m_user_login_password")).sendKeys("password38");
-	    Thread.sleep(2000);
+	    //Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div/div[2]/div[4]/button[2]")).click();
 	    
    }
@@ -263,13 +263,12 @@ public class Main_automationpage {
    
    public void department()throws InterruptedException  
    {
-	 
 	 //click on department
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div[2]/div/div[1]/span/a")).click();
-	 Thread.sleep(4000);
+	 Thread.sleep(2000);
 	 // add department
      driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button/i[1]")).click();
-     Thread.sleep(4000);
+     Thread.sleep(2000);
      
    }
  
@@ -283,23 +282,23 @@ public class Main_automationpage {
 public void dept_real()throws InterruptedException  
 {
 	// real value
-	 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	 driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	 driver.findElement(By.name("dept_name")).clear();
 	 driver.findElement(By.name("dept_name")).sendKeys("A");
-	 Thread.sleep(4000);
+	 Thread.sleep(500);
 	 
 	 driver.findElement(By.name("code")).clear();
 	 driver.findElement(By.name("code")).sendKeys("2");
-	 Thread.sleep(4000);
+	 Thread.sleep(500);
 	 
      driver.findElement(By.id("textArea")).sendKeys("This is A department");
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-	 Thread.sleep(4000);
+	 Thread.sleep(500);
 }
 
 
 
-//-----------------------------------enter department with parent dept-------------------------------------------------------// 
+//-----------------------------------enter department with parentdept-------------------------------------------------------// 
 
 @Test (priority=15 , dependsOnMethods = "department")
 
@@ -307,15 +306,15 @@ public void parent_dept()throws InterruptedException
 
 {
   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
-  Thread.sleep(4000);
+  Thread.sleep(500);
   
   driver.findElement(By.name("dept_name")).clear();
   driver.findElement(By.name("dept_name")).sendKeys("a1");
-  Thread.sleep(4000);
+  Thread.sleep(500);
 	 
   driver.findElement(By.name("code")).clear();
   driver.findElement(By.name("code")).sendKeys("3");
-  Thread.sleep(4000);
+  Thread.sleep(500);
   
   // select parent department 
   
@@ -325,7 +324,7 @@ public void parent_dept()throws InterruptedException
 	 
   driver.findElement(By.id("textArea")).sendKeys("This is a1 department");
   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button/span")).click();
-  Thread.sleep(7000);
+  Thread.sleep(500);
   
 }
 
@@ -337,75 +336,75 @@ public void parent_dept()throws InterruptedException
 public void dept_c_dept()throws InterruptedException  
 {
 	// real value
-	 Thread.sleep(2000);
+	 Thread.sleep(500);
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
 	 
 	 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	 driver.findElement(By.name("dept_name")).clear();
 	 driver.findElement(By.name("dept_name")).sendKeys("C");
-	 Thread.sleep(8000);
+	 Thread.sleep(500);
 	 
 	 driver.findElement(By.name("code")).clear();
 	 driver.findElement(By.name("code")).sendKeys("04");
-	 Thread.sleep(8000);
+	 Thread.sleep(500);
 	 
      driver.findElement(By.id("textArea")).sendKeys("This is c department");
 	 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-	 Thread.sleep(8000);
+	 Thread.sleep(500);
 	 
 	 
       // D dept
 	 
 	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 	  
 	  driver.findElement(By.name("dept_name")).clear();
 	  driver.findElement(By.name("dept_name")).sendKeys("D");
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 		 
 	  driver.findElement(By.name("code")).clear();
 	  driver.findElement(By.name("code")).sendKeys("5");
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 	  	 
 	  driver.findElement(By.id("textArea")).sendKeys("This is D department");
 	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 	    
 
 
       // E dept
 	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 
 	  driver.findElement(By.name("dept_name")).clear();
 	  driver.findElement(By.name("dept_name")).sendKeys("E");
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 	 
 	  driver.findElement(By.name("code")).clear();
 	  driver.findElement(By.name("code")).sendKeys("6");
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 	 
 	  driver.findElement(By.id("textArea")).sendKeys("This is E department");
 	  driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-	  Thread.sleep(8000);
+	  Thread.sleep(500);
 	  
 	  
 	// b dept
-	     Thread.sleep(8000);
+	     Thread.sleep(500);
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/a/button")).click();
 		 
 		 driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		 driver.findElement(By.name("dept_name")).clear();
 		 driver.findElement(By.name("dept_name")).sendKeys("B");
-		 Thread.sleep(8000);
+		 Thread.sleep(500);
 		 
 		 driver.findElement(By.name("code")).clear();
 		 driver.findElement(By.name("code")).sendKeys("08");
-		 Thread.sleep(8000);
+		 Thread.sleep(500);
 		 
 	     driver.findElement(By.id("textArea")).sendKeys("This is B department");
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button")).click();
-		 Thread.sleep(8000);
+		 Thread.sleep(500);
 		
 }
 //-------------------------------------Csv download---------------------------------------------------------------------//
@@ -414,7 +413,7 @@ public void dept_c_dept()throws InterruptedException
 public void dept_download() throws InterruptedException
  {
   driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]")).click();
-  Thread.sleep(3000);
+  Thread.sleep(500);
   
   driver.findElement(By.xpath("//*[@id=\"admin-step\"]/a")).click();
   driver.findElement(By.xpath("//*[@id=\"admin-step\"]/ul/li[1]/a")).click();
@@ -430,11 +429,11 @@ public void dept_download() throws InterruptedException
 			 
 			//click on position
 			driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div[3]/div/div[1]/span/a")).click();
-			Thread.sleep(8000);
+			Thread.sleep(500);
 			 
 		    //enter value in search box
 			driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/div/input")).sendKeys("testing");
-			Thread.sleep(8000);
+			Thread.sleep(500);
 			
 			// output search result
 			String search_msg =	driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/table/tbody/tr/td")).getText();
@@ -444,7 +443,7 @@ public void dept_download() throws InterruptedException
 			// remove search result
 		  
 		    driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/div/input")).clear();
-		    Thread.sleep(8000);
+		    Thread.sleep(500);
 }
 //----------------------------------------------Add real position-------------------------------------------//
 
@@ -455,7 +454,7 @@ public void dept_download() throws InterruptedException
 		                               //a position
 		//click on add symbol
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		//code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("1");
@@ -464,13 +463,13 @@ public void dept_download() throws InterruptedException
 		
 		//click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
 		
 		                            //b position
 		//click on add symbol
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		//code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("2");
@@ -479,14 +478,14 @@ public void dept_download() throws InterruptedException
 		
 		//click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
 		
 		                           //c position
 		
 		//click on add symbol
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		//code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("3");
@@ -495,14 +494,14 @@ public void dept_download() throws InterruptedException
 		
 		//click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		
 		                             //d position
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
 		//click on add symbol
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		//code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("4");
@@ -511,14 +510,14 @@ public void dept_download() throws InterruptedException
 		
 		//click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		                            //e position
 		
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[1]/a")).click();
 		//click on add symbol
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div[2]/div/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(500);
 		
 		//code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("5");
@@ -527,7 +526,7 @@ public void dept_download() throws InterruptedException
 		
 		//click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
-		Thread.sleep(8000);
+		Thread.sleep(4000);
 		}
 
 //----------------------------------------------------------------------------------------------------------------------//
@@ -540,6 +539,7 @@ public void dept_download() throws InterruptedException
 	public void user_enter()throws InterruptedException  
 	{
 		   driver.findElement(By.xpath("//*[@id=\"admin-step\"]/a")).click();
+		   
 		   driver.findElement(By.xpath("//*[@id=\"admin-step\"]/ul/li[1]/a")).click();
 		   Thread.sleep(2000);
 	}
@@ -550,7 +550,7 @@ public void dept_download() throws InterruptedException
 	   {
 	     // click on user registration
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div[4]/div/div[1]/span/a")).click();
-	     Thread.sleep(3000);
+	     Thread.sleep(2000);
 		 //click on add user
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button")).click();
 		 Thread.sleep(2000); 
@@ -565,12 +565,12 @@ public void dept_download() throws InterruptedException
 	
    
 	      // change i-frame for click on link 
-//		    driver.switchTo().frame("iframe"); 
-//		    driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).click();		
-//		    Thread.sleep(2000);
+		  //driver.switchTo().frame("iframe"); 
+		  //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).click();		
+		  //Thread.sleep(2000);
 	
 		   driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-	       Thread.sleep(3000);
+	       Thread.sleep(500);
 	     
 	       //last name validation
 	       String lastname_val_msg = driver.findElement(By.xpath("//*[@id=\"last_name-error\"]")).getText();
@@ -603,7 +603,7 @@ public void dept_download() throws InterruptedException
 		public void checkbox_validation()throws InterruptedException  
 		{
 	     
-		//workflow and travel expense checkbox validation
+		//workflow and travel expense check box validation
 	
 		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();	
 		Thread.sleep(2000);
@@ -674,70 +674,81 @@ public void dept_download() throws InterruptedException
 		 
 		 //click on submit
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-	     Thread.sleep(3000);
-		
+	     //Thread.sleep(3000);
+		 
+	     String user_alert = driver.findElement(By.className("alertOut")).getText();
+	     String user_alert_real = "×\n" + 
+	     		"User created successfully";
+	     Assert.assertEquals(user_alert, user_alert_real);
+	     Thread.sleep(2000);
 }
-                                               //User karan patel
+
+       //User karan patel
 
 @Test(priority=25, dependsOnMethods ="checkvalidation")
+
 		public void Enter_user2_Karan() throws InterruptedException
 		{
 		
 	     //click on add user
 	     driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button")).click();
-	     Thread.sleep(7000); 
-	    
+	     Thread.sleep(2000); 
+	
 	     //Enter last name
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
 		 Thread.sleep(1000);
 		 
 		 //Enter first name
 		 
-		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Karan");
-		Thread.sleep(8000);
+		 driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Karan");
+		 Thread.sleep(1000);
 		
-		// Enter Employee id
+		 // Enter Employee id
 		
-		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("K1");
-		Thread.sleep(1000);
+		 driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("K1");
+		 Thread.sleep(1000);
+		 
+		 // Enter valid email (This is random email method)
 		
-		// Enter valid email (This is random email method)
-		
-	    // method for send email randomly
+	     // method for send email randomly
 		
 		 Random r =new Random();
 		 String email2 ="Karran"+r.nextInt(7000)+"@yopmail.com";
 		 //System.out.println(email);
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email2);
-        Thread.sleep(2000);
+         Thread.sleep(2000);
         
-        // select category superadmin/admin/normal user
+         // select category superadmin/admin/normal user
         
-         Select dropdown  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
-		 dropdown.selectByVisibleText("Super Admin");
-		 Thread.sleep(2000);
+          Select dropdown  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
+		  dropdown.selectByVisibleText("Super Admin");
+		  Thread.sleep(2000);
 		 	 
-		 // select checkbox
-		 //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
-		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
-		 
-		// select department
+		  // select checkbox
+		  //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
+		  driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+		  
+		 // select department
 	        
          Select department  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
 		 department.selectByVisibleText("C");
-		 Thread.sleep(5000);
+		 Thread.sleep(1000);
 		 
-		// select position
+		 // select position
 	        
          Select position  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[2]/div/select")));
 		 position.selectByVisibleText("c");
-		 Thread.sleep(2000);
+		 Thread.sleep(1000);
 		 
 		 
 		 //click on submit
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-	     Thread.sleep(8000);
-		
+	    
+		 String user_alert = driver.findElement(By.className("alertOut")).getText();
+		 String user_alert_real = "×\n" + 
+		     		"User created successfully";
+		 Assert.assertEquals(user_alert, user_alert_real);
+	     Thread.sleep(2000);
 }
 
 //User bhavik patel
@@ -749,7 +760,7 @@ public void dept_download() throws InterruptedException
 	
 	    //click on add user
         driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button")).click();
-        Thread.sleep(7000);
+        Thread.sleep(4000);
     
 		 //Enter last name
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
@@ -758,7 +769,7 @@ public void dept_download() throws InterruptedException
 		 //Enter first name
 		 
 		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Bhavik");
-		Thread.sleep(8000);
+		Thread.sleep(1000);
 		
 		// Enter Employee id
 		
@@ -783,34 +794,38 @@ public void dept_download() throws InterruptedException
 		 // select checkbox
 		 
 		 //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
-		 //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
 		
-		 
+		  
 		// select department
 	        
          Select department  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
 		 department.selectByVisibleText("D");
-		 Thread.sleep(5000);
+		 Thread.sleep(1000);
 		 
 		// select position
 	        
          Select position  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[2]/div/select")));
 		 position.selectByVisibleText("d");
-		 Thread.sleep(2000);
+		 Thread.sleep(1000);
 		
 		 //click on submit
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-	     Thread.sleep(8000);    
+	    
+		 String user_alert = driver.findElement(By.className("alertOut")).getText();
+		 String user_alert_real = "×\n" + 
+		     		"User created successfully";
+		 Assert.assertEquals(user_alert, user_alert_real);
+		 Thread.sleep(2000);		     
 }
-  //user test
+ //user test
 @Test(priority=27, dependsOnMethods ="checkvalidation")
 		public void Enter_user2_test() throws InterruptedException
 		{
-		
 		 //click on add user
 		 driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button")).click();
-		 Thread.sleep(7000); 
-		
+		 Thread.sleep(2000); 
+		 
 		 //Enter last name
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
 		 Thread.sleep(1000);
@@ -818,7 +833,7 @@ public void dept_download() throws InterruptedException
 		 //Enter first name
 		 
 		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("test");
-		Thread.sleep(8000);
+		Thread.sleep(1000);
 		
 		// Enter Employee id
 		
@@ -839,7 +854,7 @@ public void dept_download() throws InterruptedException
 		
 		 Select dropdown  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
 		 dropdown.selectByVisibleText("Super Admin");
-		 Thread.sleep(2000);
+		 Thread.sleep(1000);
 		 	 
 		 // select checkbox
 		 //driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
@@ -851,11 +866,13 @@ public void dept_download() throws InterruptedException
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
 	     Thread.sleep(500);
 	     
-	     String payment_alert = driver.findElement(By.className("alert")).getText();
-		 System.out.println(payment_alert);
+	     String payment_alert = driver.findElement(By.className("alert-warning")).getText();
+	     String payment_alert_real = "×\n" + 
+		     		"You need to upgrade your package. Click here to upgrade your package.";
+	 	 Assert.assertEquals(payment_alert, payment_alert_real);
 	     
-		 // click on cancel
 		 
+		 //click on cancel button 
 		 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[2]")).click();
 
 }
@@ -879,7 +896,7 @@ public void user_chandni_edit() throws InterruptedException
      
      Select department  = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
 	 department.selectByVisibleText("A");
-	 Thread.sleep(5000);
+	 Thread.sleep(2000);
 	 
 	// select position
      
@@ -889,26 +906,16 @@ public void user_chandni_edit() throws InterruptedException
 	 
 	 //select proxy approver
 	 
-//	  driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[13]/div/div[2]/div/div/a")).click();
-//	  Thread.sleep(3000);
-//	  driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[13]/div/div[2]/div[1]/div[2]/div[1]/div/input")).sendKeys("milind");
-//	  Thread.sleep(2000);
-//	  driver.findElement(By.xpath("//*[@id=\"typeahead-1588-5045-option-0\"]/a")).click();
-//	
-	
+	  driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[13]/div/div[2]/div/div/a")).click();
+	  Thread.sleep(3000);
+	  driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[13]/div/div[2]/div[1]/div[2]/div[1]/div/input")).sendKeys("milind");
+	  Thread.sleep(2000);
+	  
+	 Select proxyname = new Select(driver.findElement(By.id("//*[@id=\"typeahead-1420-7689\"]")));
+	 proxyname.selectByVisibleText("Milind");
+	  
 	 //click on submit
-	 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-     Thread.sleep(8000);    
-	
+	 driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();   
 }
 }
-
-
-
-
-
-
-
-
-
 

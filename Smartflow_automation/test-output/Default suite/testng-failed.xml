@@ -5,10 +5,11 @@
     <classes>
       <class name="src.Main_automationpage">
         <methods>
+          <include name="Enter_user2_bhavik"/>
+          <include name="Enter_user2_test"/>
           <include name="checkvalidation"/>
-          <include name="parent_dept"/>
-          <include name="department"/>
-          <include name="user_edit"/>
+          <include name="user_chandni_edit"/>
+          <include name="admin"/>
         </methods>
       </class> <!-- src.Main_automationpage -->
     </classes>
