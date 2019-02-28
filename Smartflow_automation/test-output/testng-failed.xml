@@ -5,11 +5,22 @@
     <classes>
       <class name="src.Main_automationpage">
         <methods>
-          <include name="Enter_user2_bhavik"/>
-          <include name="Enter_user2_test"/>
-          <include name="checkvalidation"/>
-          <include name="user_chandni_edit"/>
+          <include name="parent_dept"/>
+          <include name="real_position"/>
+          <include name="Enter_user2_milind"/>
+          <include name="user_enter"/>
+          <include name="yopmail"/>
+          <include name="dept_c_dept"/>
           <include name="admin"/>
+          <include name="checkbox_validation"/>
+          <include name="dept_real"/>
+          <include name="checkvalidation"/>
+          <include name="User_registarion"/>
+          <include name="User_submit"/>
+          <include name="department"/>
+          <include name="position"/>
+          <include name="user_chandni_edit"/>
+          <include name="dept_download"/>
         </methods>
       </class> <!-- src.Main_automationpage -->
     </classes>
