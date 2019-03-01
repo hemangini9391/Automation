@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="src.Main_automationpage">
+      <class name="src.Appliction">
         <methods>
-          <include name="checkvalidation"/>
-          <include name="user_chandni_edit"/>
+          <include name="create_flow"/>
         </methods>
-      </class> <!-- src.Main_automationpage -->
+      </class> <!-- src.Appliction -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
