@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="39444" started-at="2019-03-05T11:30:29Z" finished-at="2019-03-05T11:31:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="39444" started-at="2019-03-05T11:30:29Z" finished-at="2019-03-05T11:31:09Z">
+      <class name="src.Csv_upload_test">
+        <test-method status="PASS" signature="Browserlaunch()[pri:0, instance:src.Csv_upload_test@21a06946]" name="Browserlaunch" duration-ms="10942" started-at="2019-03-05T17:00:29Z" finished-at="2019-03-05T17:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browserlaunch -->
+        <test-method status="PASS" signature="file()[pri:0, instance:src.Csv_upload_test@21a06946]" name="file" duration-ms="28448" started-at="2019-03-05T17:00:40Z" finished-at="2019-03-05T17:01:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- file -->
+      </class> <!-- src.Csv_upload_test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
