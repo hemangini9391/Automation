@@ -73,7 +73,5 @@ public class Csv_upload_test {
 
 		robot.keyPress(KeyEvent.VK_ENTER);
 
-		
-
 	}
 }

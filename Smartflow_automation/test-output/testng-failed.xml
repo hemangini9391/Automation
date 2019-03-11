@@ -3,7 +3,27 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="src.Csv_upload_test"/>
+      <class name="src.department"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="src.department">
+        <methods>
+          <include name="admin"/>
+          <include name="dept_edit"/>
+          <include name="yopmail"/>
+          <include name="department_submit"/>
+          <include name="departmenttcode"/>
+          <include name="dept_download"/>
+          <include name="department_name"/>
+          <include name="dept_real"/>
+          <include name="dept_c_dept"/>
+          <include name="department1"/>
+          <include name="dept_B_delete"/>
+          <include name="parent_dept"/>
+        </methods>
+      </class> <!-- src.department -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

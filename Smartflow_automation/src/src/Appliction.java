@@ -21,7 +21,7 @@ public class Appliction {
 	public void Browserlaunch() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rising1\\Desktop\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://ec2-54-71-174-152.us-west-2.compute.amazonaws.com/dash_board/index#/app/dashboard/home");
+		driver.get("http://ec2-34-216-206-233.us-west-2.compute.amazonaws.com/dash_board/index#/app/dashboard/home");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("English")).click();
 		driver.manage().window().maximize();
@@ -64,137 +64,44 @@ public class Appliction {
 
 	// --------------------------------drag and
 	// drop-------------------------------------//
+
 	@Test(priority = 4)
 
-	public void actionsClass() throws InterruptedException {
+	public void form_start() throws InterruptedException {
 
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/div/div/div/div/div[2]/div[1]/div/div[3]/a[1]"))
 				.click();
 		Thread.sleep(2000);
-
 		driver.findElement(By.id("appName")).sendKeys("firstapp");
 		driver.findElement(By.id("appDesc")).sendKeys("This is testing");
 		driver.findElement(By.xpath("//*[@id=\"createApp\"]/div/div/div[5]/button")).click();
 		Thread.sleep(3000);
 
-		// --------------Textbox-------------------//
-
-		driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[1]/div/label"))
-				.click();
-		Thread.sleep(1000);
-
-		driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[1]/div/div/div[1]/input"))
-				.clear();
-		driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[1]/div/div/div[1]/input"))
-				.sendKeys("Form");
-		driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[1]/div/div/div[2]/button[1]"))
-				.click();
-		Thread.sleep(3000);
-
-		Actions action = new Actions(driver);
-
-		WebElement sourceLocator = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[1]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator, targetLocator).build().perform();
-		Thread.sleep(2000);
-
-		// ------------Textarea---------------------//
-
-		WebElement sourceLocator1 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[2]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator1 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator1, targetLocator1).build().perform();
-		Thread.sleep(2000);
-
-		// ------------checkbox-----------------------//
-		WebElement sourceLocator2 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[3]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator2 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator2, targetLocator2).build().perform();
-		Thread.sleep(2000);
-
-		// -------------radio button------------------//
-		WebElement sourceLocator3 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[4]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator3 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator3, targetLocator3).build().perform();
-		Thread.sleep(2000);
-
-		// ------------------select section------------//
-		driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[4]/button[1]"))
-				.click();
-		Thread.sleep(2000);
-
-		// -------------drop down------------------//
-		WebElement sourceLocator4 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[5]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator4 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section[2]/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator4, targetLocator4).build().perform();
-		Thread.sleep(2000);
-
-		// -------------date picker------------------//
-		WebElement sourceLocator5 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[6]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator5 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section[2]/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator5, targetLocator5).build().perform();
-		Thread.sleep(2000);
-
-		// -------------date and time picker ------------------//
-		WebElement sourceLocator6 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[8]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator6 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section[2]/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator6, targetLocator6).build().perform();
-		Thread.sleep(2000);
-
-		// -------------date and time picker ------------------//
-		WebElement sourceLocator7 = driver.findElement(By.xpath(
-				" //*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div[10]/div[1]/button"));
-		// To get target locator
-		WebElement targetLocator7 = driver.findElement(By.xpath(
-				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section[2]/div/div[2]/div[2]"));
-		// dragAndDrop(source, target) method accepts two parameters source and locator.
-		// used dragAndDrop method to drag and drop the source locator to target locator
-		action.dragAndDrop(sourceLocator7, targetLocator7).build().perform();
-		Thread.sleep(2000);
-
+		// ------------form create -------------------//
 	}
 
 	@Test(priority = 5)
+	public void create_form() throws InterruptedException {
+
+		Actions action = new Actions(driver);
+		int i;
+		for (i = 1; i <= 15; i++) {
+
+			WebElement sourceLocator1 = driver.findElement(By.xpath(
+					"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[1]/div/div/div/div/div["
+							+ i + "]/div[1]/button"));
+			// To get target locator
+			WebElement targetLocator1 = driver.findElement(By.xpath(
+					"//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[2]/aside/div/ui-view/ui-view/ui-view/div/div/div/div[2]/section/div/div[2]/div[2]"));
+			// dragAndDrop(source, target) method accepts two parameters source and locator.
+			// used dragAndDrop method to drag and drop the source locator to target locator
+			action.dragAndDrop(sourceLocator1, targetLocator1).build().perform();
+			Thread.sleep(2000);
+		}
+	}
+
+	@Test(priority = 6)
 	public void create_flow() throws InterruptedException {
 		// click on create flow
 
@@ -203,64 +110,58 @@ public class Appliction {
 		Thread.sleep(4000);
 
 		// ----------------------first step------------------//
-		// click on edit for heading
-
-		driver.findElement(By.xpath("//*[@id=\"tr-0\"]/start-task/div/div[2]/div[1]/div[2]/span[2]/button")).click();
-		Thread.sleep(1000);
-		driver.findElement(By.id("appName")).clear();
-		driver.findElement(By.id("appName")).sendKeys("first step");
-		driver.findElement(By.xpath("//*[@id=\"tr-0\"]/start-task/div/div[2]/div[1]/div[2]/span[2]/button[1]")).click();
-		Thread.sleep(1000);
 		// click on link to assign user
 		driver.findElement(By.xpath("//*[@id=\"tr-0\"]/start-task/div/div[2]/div[2]/div/a[1]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[5]/button[2]")).click();
 		Thread.sleep(2000);
 
-		// -----------------------second step----------------//
+		// ----------------------- next step assign through array----------------//
 
-		// click on approver link
-		driver.findElement(By.xpath("//*[@id=\"tr-2\"]/task-selector/div/span/span[2]")).click();
+		String[] stepname = { "fouth_step", "third_step", "second_step", "fist_step" };
+		String[] approvername = { "milind", "milind", "chandni", "chandni" };
+
+		for (int i = 0; i < stepname.length; i++) {
+			driver.findElement(By.xpath("//*[@id=\"tr-2\"]/task-selector/div/span/span[2]")).click();
+			Thread.sleep(2000);
+
+			driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[1]/div[2]/span[2]/button"))
+					.click();
+			driver.findElement(By.id("appName")).clear();
+			driver.findElement(By.id("appName")).sendKeys(stepname[i]);
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[1]/div[2]/span[2]/button[1]"))
+					.click();
+			Thread.sleep(1000);
+
+			// approver details
+			driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[2]/div/div[2]/a[1]")).click();
+			Thread.sleep(4000);
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[4]/div[1]/input"))
+					.sendKeys(approvername[i]);
+			Thread.sleep(2000);
+			driver.findElement(By.className("active")).click();
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[6]/button[2]")).click();
+			Thread.sleep(3000);
+		}
+	}
+
+	@Test(priority = 7)
+	public void permission() throws InterruptedException {
+
+		driver.findElement(
+				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[1]/ul/li[4]/a/span/i")).click();
 		Thread.sleep(2000);
+	}
 
-		// click on edit
-		driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[1]/div[2]/span[2]/button")).click();
-		driver.findElement(By.id("appName")).clear();
-		driver.findElement(By.id("appName")).sendKeys("second step");
-		driver.findElement(By.xpath("//*[@id=\"tr-0\"]/start-task/div/div[2]/div[1]/div[2]/span[2]/button[1]")).click();
-		Thread.sleep(1000);
+	@Test(priority = 8)
+	public void publish() throws InterruptedException {
 
-		// approver details
-		driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[2]/div/div[2]/a[1]")).click();
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[4]/div[1]/input")).sendKeys("chandni");
+		driver.findElement(
+				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/div[2]/section/div/div[1]/ul/li[5]/a/span/i")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.className("active")).click();
+		driver.findElement(By.xpath("//*[@id=\"publish\"]/div/div/div/form/div[4]/button[1]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[6]/button[2]")).click();
-
-		// -----------------------third step----------------//
-
-		// click on approver link
-		driver.findElement(By.xpath("//*[@id=\"tr-2\"]/task-selector/div/span/span[2]")).click();
-		Thread.sleep(2000);
-
-		// click on edit
-		driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[1]/div[2]/span[2]/button")).click();
-		driver.findElement(By.id("appName")).clear();
-		driver.findElement(By.id("appName")).sendKeys("third step");
-		driver.findElement(By.xpath("//*[@id=\"tr-0\"]/start-task/div/div[2]/div[1]/div[2]/span[2]/button[1]")).click();
-		Thread.sleep(1000);
-
-		// approver details
-		driver.findElement(By.xpath("//*[@id=\"tr-4\"]/approval-task/div/div/div[2]/div/div[2]/a[1]")).click();
-		Thread.sleep(4000);
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[4]/div[1]/input")).sendKeys("milind");
-		Thread.sleep(2000);
-		driver.findElement(By.className("active")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[6]/button[2]")).click();
-	
-		
 	}
 }

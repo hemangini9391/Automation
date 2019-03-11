@@ -34,7 +34,7 @@ public class Main_automationpage {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rising1\\Desktop\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://ec2-54-71-174-152.us-west-2.compute.amazonaws.com/dash_board/index#/app/dashboard/home");
+		driver.get("http://ec2-34-216-206-233.us-west-2.compute.amazonaws.com/m_user_login/sign_in#/app/dashboard/home");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("English")).click();
 		driver.findElement(By.linkText("新規登録")).click();
@@ -689,181 +689,181 @@ public class Main_automationpage {
 
 	// User karan patel
 
-//	@Test(priority = 25, dependsOnMethods = "checkvalidation")
-//
-//	public void Enter_user2_Karan() throws InterruptedException {
-//		// click on add user
-//		driver.findElement(
-//				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
-//				.click();
-//		Thread.sleep(2000);
-//
-//		// Enter last name
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
-//		Thread.sleep(1000);
-//
-//		// Enter first name
-//		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Karan");
-//		Thread.sleep(1000);
-//
-//		// Enter Employee id
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("K1");
-//		Thread.sleep(1000);
-//
-//		// Enter valid email (This is random email method)
-//		// method for send email randomly
-//		Random r = new Random();
-//		String email2 = "Karran" + r.nextInt(7000) + "@yopmail.com";
-//		// System.out.println(email);
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email2);
-//		Thread.sleep(2000);
-//
-//		// select category superadmin/admin/normal user
-//		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
-//		dropdown.selectByVisibleText("Super Admin");
-//		Thread.sleep(2000);
-//
-//		// select checkbox
-//		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
-//
-//		// select department
-//		Select department = new Select(driver
-//				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
-//		department.selectByVisibleText("C");
-//		Thread.sleep(1000);
-//
-//		// select position
-//		Select position = new Select(driver
-//				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[2]/div/select")));
-//		position.selectByVisibleText("c");
-//		Thread.sleep(1000);
-//
-//		// click on submit
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-//
-//		// User created successfully message verified
-//		String user_alert = driver.findElement(By.className("alertOut")).getText();
-//		String user_alert_real = "×\n" + "User created successfully";
-//		Assert.assertEquals(user_alert, user_alert_real);
-//		Thread.sleep(3000);
-//	}
+	@Test(priority = 25, dependsOnMethods = "checkvalidation")
+
+	public void Enter_user2_Karan() throws InterruptedException {
+		// click on add user
+		driver.findElement(
+				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
+				.click();
+		Thread.sleep(2000);
+
+		// Enter last name
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
+		Thread.sleep(1000);
+
+		// Enter first name
+		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Karan");
+		Thread.sleep(1000);
+
+		// Enter Employee id
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("K1");
+		Thread.sleep(1000);
+
+		// Enter valid email (This is random email method)
+		// method for send email randomly
+		Random r = new Random();
+		String email2 = "Karran" + r.nextInt(7000) + "@yopmail.com";
+		// System.out.println(email);
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email2);
+		Thread.sleep(2000);
+
+		// select category superadmin/admin/normal user
+		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
+		dropdown.selectByVisibleText("Super Admin");
+		Thread.sleep(2000);
+
+		// select checkbox
+		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+
+		// select department
+		Select department = new Select(driver
+				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
+		department.selectByVisibleText("C");
+		Thread.sleep(1000);
+
+		// select position
+		Select position = new Select(driver
+				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[2]/div/select")));
+		position.selectByVisibleText("c");
+		Thread.sleep(1000);
+
+		// click on submit
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+
+		// User created successfully message verified
+		String user_alert = driver.findElement(By.className("alertOut")).getText();
+		String user_alert_real = "×\n" + "User created successfully";
+		Assert.assertEquals(user_alert, user_alert_real);
+		Thread.sleep(3000);
+}
 
 	// User bhavik patel
 
-//	@Test(priority = 26, dependsOnMethods = "checkvalidation")
-//	public void Enter_user2_bhavik() throws InterruptedException {
-//
-//		// click on add user
-//		driver.findElement(
-//				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
-//				.click();
-//		Thread.sleep(4000);
-//
-//		// Enter last name
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
-//		Thread.sleep(1000);
-//
-//		// Enter first name
-//		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Bhavik");
-//		Thread.sleep(1000);
-//
-//		// Enter Employee id
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("B1");
-//		Thread.sleep(1000);
-//
-//		// Enter valid email (This is random email method)
-//		// method for send email randomly
-//		Random r = new Random();
-//		String email2 = "Bhaviik" + r.nextInt(8000) + "@yopmail.com";
-//		// System.out.println(email);
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email2);
-//		Thread.sleep(2000);
-//
-//		// select category superadmin/admin/normal user
-//		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
-//		dropdown.selectByVisibleText("Super Admin");
-//		Thread.sleep(2000);
-//
-//		// select checkbox
-//		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
-//		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
-//
-//		// select department
-//		Select department = new Select(driver
-//				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
-//		department.selectByVisibleText("D");
-//		Thread.sleep(1000);
-//
-//		// select position
-//		Select position = new Select(driver
-//				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[2]/div/select")));
-//		position.selectByVisibleText("d");
-//		Thread.sleep(1000);
-//
-//		// click on submit
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-//
-//		// User created successfully msg verified
-//		String user_alert = driver.findElement(By.className("alertOut")).getText();
-//		String user_alert_real = "×\n" + "User created successfully";
-//		Assert.assertEquals(user_alert, user_alert_real);
-//		Thread.sleep(3000);
-//	}
+	@Test(priority = 26, dependsOnMethods = "checkvalidation")
+	public void Enter_user2_bhavik() throws InterruptedException {
+
+		// click on add user
+		driver.findElement(
+				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
+				.click();
+		Thread.sleep(4000);
+
+		// Enter last name
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
+		Thread.sleep(1000);
+
+		// Enter first name
+		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("Bhavik");
+		Thread.sleep(1000);
+
+		// Enter Employee id
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("B1");
+		Thread.sleep(1000);
+
+		// Enter valid email (This is random email method)
+		// method for send email randomly
+		Random r = new Random();
+		String email2 = "Bhaviik" + r.nextInt(8000) + "@yopmail.com";
+		// System.out.println(email);
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email2);
+		Thread.sleep(2000);
+
+		// select category superadmin/admin/normal user
+		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
+		dropdown.selectByVisibleText("Super Admin");
+		Thread.sleep(2000);
+
+		// select checkbox
+		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
+		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+
+		// select department
+		Select department = new Select(driver
+				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[1]/div/select")));
+		department.selectByVisibleText("D");
+		Thread.sleep(1000);
+
+		// select position
+		Select position = new Select(driver
+				.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[12]/div[2]/div[1]/div[2]/div[2]/div/select")));
+		position.selectByVisibleText("d");
+		Thread.sleep(1000);
+
+		// click on submit
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+
+		// User created successfully msg verified
+		String user_alert = driver.findElement(By.className("alertOut")).getText();
+		String user_alert_real = "×\n" + "User created successfully";
+		Assert.assertEquals(user_alert, user_alert_real);
+		Thread.sleep(3000);
+		}
 	// user test for check payment message
 
-//	@Test(priority = 27, dependsOnMethods = "checkvalidation")
-//	public void Enter_user2_test() throws InterruptedException {
-//		// click on add user
-//		driver.findElement(
-//				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
-//				.click();
-//		Thread.sleep(2000);
-//
-//		// Enter last name
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
-//		Thread.sleep(1000);
-//
-//		// Enter first name
-//		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("test");
-//		Thread.sleep(1000);	
-//
-//		// Enter Employee id
-//
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("tK1");
-//		Thread.sleep(1000);
-//
-//		// Enter valid email (This is random email method)
-//		// method for send email randomly
-//
-//		Random r = new Random();
-//		String email12 = "testrt" + r.nextInt(7000) + "@yopmail.com";
-//		// System.out.println(email);
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email12);
-//		Thread.sleep(2000);
-//
-//		// select category superadmin/admin/normal user
-//		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
-//		dropdown.selectByVisibleText("Super Admin");
-//		Thread.sleep(1000);
-//
-//		// select checkbox
-//		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
-//		Thread.sleep(500);
-//
-//		// click on submit
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-//		Thread.sleep(500);
-//
-//		String payment_alert = driver.findElement(By.className("alert-warning")).getText();
-//		String payment_alert_real = "×\n" + "You need to upgrade your package. Click here to upgrade your package.";
-//		Assert.assertEquals(payment_alert, payment_alert_real);
-//
-//		// click on cancel button
-//		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[2]")).click();
-//
-//	}
+	@Test(priority = 27, dependsOnMethods = "checkvalidation")
+	public void Enter_user2_test() throws InterruptedException {
+		// click on add user
+		driver.findElement(
+				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
+				.click();
+		Thread.sleep(2000);
+
+		// Enter last name
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[1]/div/input")).sendKeys("Patel");
+		Thread.sleep(1000);
+
+		// Enter first name
+		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("test");
+		Thread.sleep(1000);	
+
+		// Enter Employee id
+
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_employeeid\"]")).sendKeys("tK1");
+		Thread.sleep(1000);
+
+		// Enter valid email (This is random email method)
+		// method for send email randomly
+
+		Random r = new Random();
+		String email12 = "testrt" + r.nextInt(7000) + "@yopmail.com";
+		// System.out.println(email);
+		driver.findElement(By.xpath("//*[@id=\"m_user_login_email\"]")).sendKeys(email12);
+		Thread.sleep(2000);
+
+		// select category superadmin/admin/normal user
+		Select dropdown = new Select(driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/select")));
+		dropdown.selectByVisibleText("Super Admin");
+		Thread.sleep(1000);
+
+		// select checkbox
+		// driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[1]/div/label/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+		Thread.sleep(500);
+
+		// click on submit
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+		Thread.sleep(500);
+
+		String payment_alert = driver.findElement(By.className("alert-warning")).getText();
+		String payment_alert_real = "×\n" + "You need to upgrade your package. Click here to upgrade your package.";
+		Assert.assertEquals(payment_alert, payment_alert_real);
+
+		// click on cancel button
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[2]")).click();
+
+	}
 
 	// Edit user chandni to add proxy user
 
