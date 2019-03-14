@@ -1,246 +1,24 @@
 package src;
 
-//import java.awt.event.KeyEvent;
 //import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-//import org.openqa.selenium.Keys;
-//import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-//import com.sun.tools.javac.util.List;
-
 import org.openqa.selenium.support.ui.Select;
-import java.awt.AWTException;
-import java.awt.Robot;
 
-public class Main_automationpage {
+public class Main_automationpage extends Browser_launch_signup {
 
-	WebDriver driver;
-	Robot robot;
-    int total;
+	// WebDriver driver;
+	// Robot robot;
+	   int total;
 
-	// -----------------------browser_launch-----------------------------//
-
-	@Test(priority = 1)
-
-	public void browserlaunch() {
-
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rising1\\Desktop\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://ec2-34-216-206-233.us-west-2.compute.amazonaws.com/m_user_login/sign_in#/app/dashboard/home");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.findElement(By.linkText("English")).click();
-		driver.findElement(By.linkText("新規登録")).click();
-		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//*[@id=\"twblock\"]/a/label")).click();
-	}
-
-	// --------------------------------------click on submit with blank value
-	// ----------------------------------------//
-
-	@Test(priority = 2)
-
-	public void checkvalidation() throws InterruptedException {
-		WebElement login = driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button"));
-		login.submit();
-
-		// company_name
-		String expected = driver.findElement(By.id("m_user_login_last_name-error")).getText();
-		String validation_massage = "Field can not be blank.";
-		Assert.assertEquals(expected, validation_massage);
-
-		// last_name
-		String expected1 = driver.findElement(By.id("m_user_login_last_name-error")).getText();
-		Assert.assertEquals(expected1, validation_massage);
-
-		// firstname
-		String expected2 = driver.findElement(By.id("m_user_login_first_name-error")).getText();
-		Assert.assertEquals(expected2, validation_massage);
-
-		// email
-		String expected3 = driver.findElement(By.id("m_user_login_email-error")).getText();
-		Assert.assertEquals(expected3, validation_massage);
-
-		// phonenumber
-		// String expected4 =
-		// driver.findElement(By.id("phone_validation_msg")).getText();
-		// Assert.assertEquals(expected4,validation_massage);
-
-		// password
-		String expected5 = driver.findElement(By.id("m_user_login_password-error")).getText();
-		Assert.assertEquals(expected5, validation_massage);
-
-		// confirm_password
-		String expected6 = driver.findElement(By.id("m_user_login_password_confirmation-error")).getText();
-		Assert.assertEquals(expected6, validation_massage);
-
-		// checkbox
-		String expected7 = driver.findElement(By.id("m_user_login[is_agree]-error")).getText();
-		Assert.assertEquals(expected7, validation_massage);
-
-		
-		// Sign up click
-		
-		if (!driver.findElement(By.name("m_user_login[is_agree]")).isSelected()) {
-			driver.findElement(By.name("m_user_login[is_agree]")).click();
-		}
-		driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
-	}
-	// ----------------------------------------Enter
-	// companyname-------------------------------------------------------//
-
-	@Test(priority = 3)
-
-	public void companyname() throws InterruptedException {
-
-		WebElement c_name = driver.findElement(By.id("m_user_login_company_name"));
-		c_name.sendKeys("Appsense Rising");
-		Thread.sleep(500);
-	}
-
-	// --------------------------------last
-	// name---------------------------------------------------------//
-	@Test(priority = 4, dependsOnMethods = "checkvalidation")
-	public void lastnamereal() throws InterruptedException {
-		WebElement l_namereal = driver.findElement(By.id("m_user_login_last_name"));
-		l_namereal.clear();
-		l_namereal.sendKeys("patel");
-		Thread.sleep(500);
-	}
-	// ------------------------------------------first name
-	// -----------------------------------------------//
-
-	@Test(priority = 5, dependsOnMethods = "checkvalidation")
-	public void firstnamereal() throws InterruptedException { // enter firstname real
-		WebElement l_namereal = driver.findElement(By.id("m_user_login_first_name"));
-		l_namereal.clear();
-		l_namereal.sendKeys("Chandni");
-		// Thread.sleep(500);
-	}
-	// ----------------------------------------- phone
-	// number------------------------------------------------------//
-
-	// enter real phone number
-	@Test(priority = 6, dependsOnMethods = "checkvalidation")
-	public void ph_number_real() throws InterruptedException {
-		WebElement ph_number_real = driver.findElement(By.id("m_user_login_phone"));
-		ph_number_real.clear();
-		ph_number_real.sendKeys("7567630234");
-		Thread.sleep(500);
-	}
-	// ----------------------------------------random email
-	// generate---------------------------------------------------------//
-
-	@Test(priority = 7, dependsOnMethods = "checkvalidation")
-	public void email_real() throws InterruptedException {
-
-		// enter require email
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		WebElement email_real = driver.findElement(By.id("m_user_login_email"));
-		email_real.clear();
-
-		// method for send email randomly
-		Random r = new Random();
-		String email = "Userr" + r.nextInt(1000) + "@yopmail.com";
-		// System.out.println(email);
-		email_real.sendKeys(email);
-		Thread.sleep(500);
-	}
-	// --------------------------------------------real
-	// password------------------------------------------------------//
-
-	@Test(priority = 8, dependsOnMethods = "checkvalidation")
-
-	// real password
-	public void password_real() throws InterruptedException {
-		WebElement password_alpha = driver.findElement(By.id("m_user_login_password"));
-		password_alpha.clear();
-		password_alpha.sendKeys("password38");
-		Thread.sleep(500);
-	}
-	// ------------------------ real confirm
-	// password--------------------------------------------------------------//
-
-	@Test(priority = 9, dependsOnMethods = "checkvalidation")
-
-	public void confirm_password_real() throws InterruptedException {
-		WebElement confirm_password_8 = driver.findElement(By.id("m_user_login_password_confirmation"));
-		confirm_password_8.clear();
-		confirm_password_8.sendKeys("password38");
-		Thread.sleep(500);
-	}
-	// ------------------------------------------ check box
-	// select----------------------------------------------------//
-
-	@Test(priority = 10, dependsOnMethods = "checkvalidation")
-
-	public void checkbox() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		WebElement checkbox = driver.findElement(By.name("m_user_login[is_agree]"));
-		checkbox.click();
-
-		 if ( !driver.findElement(By.name("m_user_login[is_agree]")).isSelected() )
-		 {
-		 driver.findElement(By.name("m_user_login[is_agree]")).click();
-		 }
-		 driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div[5]/div[1]/div/button")).submit();
-
-	}
-	// --------------------------yopmail
-	// conformation--------------------------------------------------------//
-
-	@Test(priority = 11, dependsOnMethods = "checkvalidation")
-
-	public void yopmail() throws InterruptedException {
-		// login email-id get
-		String test = driver.findElement(By.xpath("//*[@id=\"home\"]/div/div/div/div/p/strong")).getText();
-		System.out.println(test);
-
-		// get yopmail
-		driver.get("http://www.yopmail.com/en/");
-		Thread.sleep(2000);
-
-		// enter email-id in yopmail
-		driver.findElement(By.id("login")).sendKeys(test);
-		WebElement Check_Inbox = driver.findElement(By.xpath(
-				"/html/body/center/div/div/div[3]/table[3]/tbody/tr/td[1]/table/tbody/tr[3]/td/div[1]/form/table/tbody/tr[1]/td[3]/input"));
-		Check_Inbox.click();
-
-		// change i-frame for click on link
-		driver.switchTo().frame("ifmail");
-		driver.findElement(By.linkText("アカウントの確認")).click();
-		Thread.sleep(500);
-
-		// smartflow login with real value
-		driver.close();
-
-		// Again open chrome
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rising1\\Desktop\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://ec2-54-71-174-152.us-west-2.compute.amazonaws.com/dash_board/index#/app/dashboard/home");
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.findElement(By.linkText("English")).click();
-		driver.manage().window().maximize();
-
-		// login
-		driver.findElement(By.id("m_user_login_email")).sendKeys(test);
-		// Thread.sleep(2000);
-		driver.findElement(By.id("m_user_login_password")).sendKeys("password38");
-		// Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"new_m_user_login\"]/div/div[2]/div[4]/button[2]")).click();
-
-	}
 	// -------------------------------------------Admin----------------------------------------------------------//
 
-	@Test(priority = 12, dependsOnMethods = "checkvalidation")
+	@Test(priority = 11)
 	public void admin() throws InterruptedException {
+		
 		driver.findElement(By.xpath("//*[@id=\"wrapper\"]/div[4]/div/div/div[2]/div[3]/div/div[1]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"admin-step\"]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"admin-step\"]/ul/li[1]/a")).click();
@@ -249,7 +27,7 @@ public class Main_automationpage {
 	// -----------------------------------------------Enter into
 	// department----------------------------------------------//
 
-	@Test(priority = 13, dependsOnMethods = "checkvalidation")
+	@Test(priority = 12)
 
 	public void department() throws InterruptedException {
 		// click on department
@@ -266,7 +44,7 @@ public class Main_automationpage {
 	// ---------------------department(department with real
 	// value)-----------------------------------------------------//
 
-	@Test(priority = 14, dependsOnMethods = "department")
+	@Test(priority = 13, dependsOnMethods = "department")
 
 	public void dept_real() throws InterruptedException {
 		// real value
@@ -289,7 +67,7 @@ public class Main_automationpage {
 	// -----------------------------------enter department with parent department
 	// --------------------------------------//
 
-	@Test(priority = 15, dependsOnMethods = "department")
+	@Test(priority = 14, dependsOnMethods = "department")
 
 	public void parent_dept() throws InterruptedException {
 		driver.findElement(By.xpath(
@@ -321,7 +99,7 @@ public class Main_automationpage {
 	// --------------------------------------------------Enter C,D,E
 	// department----------------------------------------------------------//
 
-	@Test(priority = 16, dependsOnMethods = "department")
+	@Test(priority = 15, dependsOnMethods = "department")
 
 	public void dept_c_dept() throws InterruptedException {
 		// --------------------C department------------------//
@@ -411,7 +189,7 @@ public class Main_automationpage {
 	// ---------------------------------department Csv
 	// download---------------------------------------------------------------------//
 
-	@Test(priority = 17, dependsOnMethods = "checkvalidation")
+	@Test(priority = 16, dependsOnMethods = "department")
 	public void dept_download() throws InterruptedException {
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/div[2]/div[1]/button[2]"))
@@ -425,7 +203,7 @@ public class Main_automationpage {
 
 	// ------------------------------------position start
 	// ---------------------------------------------------------//
-	@Test(priority = 18, dependsOnMethods = "checkvalidation")
+	@Test(priority = 17)
 
 	public void position() throws InterruptedException {
 		// click on position
@@ -456,7 +234,7 @@ public class Main_automationpage {
 	// ----------------------------------------------Add real
 	// position-------------------------------------------//
 
-	@Test(priority = 19, dependsOnMethods = "checkvalidation")
+	@Test(priority = 18, dependsOnMethods ="position")
 
 	public void real_position() throws InterruptedException {
 		// --------a position-----------//
@@ -557,7 +335,7 @@ public class Main_automationpage {
 
 	// -------------------------------------------User registration
 	// start---------------------------------------------------//
-	@Test(priority = 20, dependsOnMethods = "checkvalidation")
+	@Test(priority = 19, dependsOnMethods = "position")
 
 	public void user_enter() throws InterruptedException {
 		driver.findElement(By.xpath("//*[@id=\"admin-step\"]/a")).click();
@@ -565,7 +343,7 @@ public class Main_automationpage {
 		Thread.sleep(2000);
 	}
 
-	@Test(priority = 21, dependsOnMethods = "checkvalidation")
+	@Test(priority = 20, dependsOnMethods = "position")
 
 	public void User_registarion() throws InterruptedException {
 		// click on user registration
@@ -584,7 +362,7 @@ public class Main_automationpage {
 	// ----------------------------click on submit and check
 	// validation-------------------------------------------------------//
 
-	@Test(priority = 22, dependsOnMethods = "checkvalidation")
+	@Test(priority = 21, dependsOnMethods = "position")
 
 	public void User_submit() throws InterruptedException {
 		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
@@ -612,7 +390,7 @@ public class Main_automationpage {
 		Thread.sleep(1000);
 	}
 
-	@Test(priority = 23, dependsOnMethods = "checkvalidation")
+	@Test(priority = 22, dependsOnMethods = "position")
 
 	public void checkbox_validation() throws InterruptedException {
 		// workflow and travel expense check box validation
@@ -627,7 +405,7 @@ public class Main_automationpage {
 
 	// User milind patel
 
-	@Test(priority = 24, dependsOnMethods = "checkvalidation")
+	@Test(priority = 23, dependsOnMethods = "position")
 	public void Enter_user2_milind() throws InterruptedException {
 
 		// Enter last name
@@ -689,7 +467,7 @@ public class Main_automationpage {
 
 	// User karan patel
 
-	@Test(priority = 25, dependsOnMethods = "checkvalidation")
+	@Test(priority = 24)
 
 	public void Enter_user2_Karan() throws InterruptedException {
 		// click on add user
@@ -747,11 +525,11 @@ public class Main_automationpage {
 		String user_alert_real = "×\n" + "User created successfully";
 		Assert.assertEquals(user_alert, user_alert_real);
 		Thread.sleep(3000);
-}
+	}
 
 	// User bhavik patel
 
-	@Test(priority = 26, dependsOnMethods = "checkvalidation")
+	@Test(priority = 25)
 	public void Enter_user2_bhavik() throws InterruptedException {
 
 		// click on add user
@@ -809,10 +587,11 @@ public class Main_automationpage {
 		String user_alert_real = "×\n" + "User created successfully";
 		Assert.assertEquals(user_alert, user_alert_real);
 		Thread.sleep(3000);
-		}
+	}
+
 	// user test for check payment message
 
-	@Test(priority = 27, dependsOnMethods = "checkvalidation")
+	@Test(priority = 26)
 	public void Enter_user2_test() throws InterruptedException {
 		// click on add user
 		driver.findElement(
@@ -826,7 +605,7 @@ public class Main_automationpage {
 
 		// Enter first name
 		driver.findElement(By.xpath("//*[@id=\"inputDefault\"]")).sendKeys("test");
-		Thread.sleep(1000);	
+		Thread.sleep(1000);
 
 		// Enter Employee id
 
@@ -867,9 +646,9 @@ public class Main_automationpage {
 
 	// Edit user chandni to add proxy user
 
-	@Test(priority = 28, dependsOnMethods = "checkvalidation")
+	@Test(priority = 27)
 
-	public void user_chandni_edit() throws InterruptedException, AWTException {
+	public void user_chandni_edit() throws InterruptedException {
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div[1]/div/div[2]/div/div[3]/div[2]/table/tbody/tr[1]/td[8]/a"))
 				.click();
@@ -900,31 +679,31 @@ public class Main_automationpage {
 				.sendKeys("milind");
 		Thread.sleep(1000);
 		driver.findElement(By.className("active")).click();
-		
-		
-		//date validation 
-		 WebElement dateBox = driver.findElement(By.id("startdate"));
-	     dateBox.click();
-	     Thread.sleep(2000);
-	     
-	     driver.findElement(By.xpath("/html/body/div[7]/div[1]/table/tbody/tr[3]/td[1]")).click();
-	     
-//	     //get all td 
-//	     List<WebElement> allDates=driver.findElements(By.xpath("/html/body/div[7]/div[1]/table/tbody/tr/td"));
-//	     total = allDates.size();
-//	     
-//	        	 
-//	     for(WebElement ele:allDates)
-//	 	 {		
-//	 	  String date=ele.getText();
-//	    	if(date.equalsIgnoreCase("28"))
-//	 			{
-//	 				ele.click();
-//	 				break;
-//	 			}
-//		}
+
+		// //date validation
+		// WebElement dateBox = driver.findElement(By.id("startdate"));
+		// dateBox.click();
+		// Thread.sleep(2000);
+		//
+		// driver.findElement(By.xpath("/html/body/div[7]/div[1]/table/tbody/tr[3]/td[1]")).click();
+
+		// //get all td
+		// List<WebElement>
+		// allDates=driver.findElements(By.xpath("/html/body/div[7]/div[1]/table/tbody/tr/td"));
+		// total = allDates.size();
+		//
+		//
+		// for(WebElement ele:allDates)
+		// {
+		// String date=ele.getText();
+		// if(date.equalsIgnoreCase("28"))
+		// {
+		// ele.click();
+		// break;
+		// }
+		// }
 
 		// click on submit
-	    driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-	} 
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
 	}
+}
