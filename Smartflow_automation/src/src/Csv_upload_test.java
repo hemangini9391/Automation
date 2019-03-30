@@ -42,19 +42,18 @@ public class Csv_upload_test {
 		robot.keyPress(KeyEvent.VK_L);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		Thread.sleep(1000);
-		//Send("‪F:\\tiger.jpg");
+		// Send("‪F:\\tiger.jpg");
 
 		// press cntrol + v and relaese
 
-		 robot.keyPress(KeyEvent.VK_CONTROL);
-		 robot.keyPress(KeyEvent.VK_V);
-		 robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
 
 		// press enter key and relaese
 		robot.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
-		//robot.setAutoDelay(2000);
-		
+		// robot.setAutoDelay(2000);
 
 		StringSelection strSel = new StringSelection("tiger.jpg");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(strSel, null);
@@ -69,7 +68,6 @@ public class Csv_upload_test {
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
-		
 
 		robot.keyPress(KeyEvent.VK_ENTER);
 

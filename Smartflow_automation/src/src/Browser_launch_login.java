@@ -23,7 +23,7 @@ public class Browser_launch_login {
 	public void Browserlaunch() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\rising1\\Desktop\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("");
+		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("English")).click();
 		driver.manage().window().maximize();
