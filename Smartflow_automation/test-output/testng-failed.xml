@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="src.Main_automationpage">
+      <class name="src.User_registration"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="src.User_registration">
         <methods>
-          <include name="parent_dept"/>
-          <include name="real_position"/>
-          <include name="Enter_user2_milind"/>
-          <include name="user_enter"/>
-          <include name="yopmail"/>
-          <include name="dept_c_dept"/>
-          <include name="admin"/>
-          <include name="checkbox_validation"/>
-          <include name="dept_real"/>
-          <include name="checkvalidation"/>
-          <include name="User_registarion"/>
+          <include name="test"/>
           <include name="User_submit"/>
-          <include name="department"/>
-          <include name="position"/>
-          <include name="user_chandni_edit"/>
-          <include name="dept_download"/>
+          <include name="user"/>
         </methods>
-      </class> <!-- src.Main_automationpage -->
+      </class> <!-- src.User_registration -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
