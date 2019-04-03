@@ -12,7 +12,7 @@ public class Main_automationpage extends Browser_launch_signup {
 
 	// WebDriver driver;
 	// Robot robot;
-	int total;
+	  int total;
 
 	// -------------------------------------------Admin----------------------------------------------------------//
 
@@ -50,14 +50,14 @@ public class Main_automationpage extends Browser_launch_signup {
 		// real value
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		driver.findElement(By.name("dept_name")).clear();
-		driver.findElement(By.name("dept_name")).sendKeys("A");
+		driver.findElement(By.name("dept_name")).sendKeys("Testing");
 		Thread.sleep(500);
 
 		driver.findElement(By.name("code")).clear();
 		driver.findElement(By.name("code")).sendKeys("2");
 		Thread.sleep(500);
 
-		driver.findElement(By.id("textArea")).sendKeys("This is A department");
+		driver.findElement(By.id("textArea")).sendKeys("This is Testing department");
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button"))
 				.click();
@@ -76,7 +76,7 @@ public class Main_automationpage extends Browser_launch_signup {
 		Thread.sleep(500);
 
 		driver.findElement(By.name("dept_name")).clear();
-		driver.findElement(By.name("dept_name")).sendKeys("a1");
+		driver.findElement(By.name("dept_name")).sendKeys("Qa");
 		Thread.sleep(500);
 
 		driver.findElement(By.name("code")).clear();
@@ -86,9 +86,9 @@ public class Main_automationpage extends Browser_launch_signup {
 		// select parent department
 		Select parent_dept = new Select(driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[1]/div[3]/div/select")));
-		parent_dept.selectByVisibleText("A");
+		parent_dept.selectByVisibleText("Testing");
 
-		driver.findElement(By.id("textArea")).sendKeys("This is a1 department");
+		driver.findElement(By.id("textArea")).sendKeys("This is QA department");
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button/span"))
 				.click();
@@ -110,14 +110,14 @@ public class Main_automationpage extends Browser_launch_signup {
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(By.name("dept_name")).clear();
-		driver.findElement(By.name("dept_name")).sendKeys("C");
+		driver.findElement(By.name("dept_name")).sendKeys("Developer");
 		Thread.sleep(500);
 
 		driver.findElement(By.name("code")).clear();
 		driver.findElement(By.name("code")).sendKeys("04");
 		Thread.sleep(500);
 
-		driver.findElement(By.id("textArea")).sendKeys("This is c department");
+		driver.findElement(By.id("textArea")).sendKeys("This is Developer department");
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button"))
 				.click();
@@ -131,14 +131,14 @@ public class Main_automationpage extends Browser_launch_signup {
 		Thread.sleep(500);
 
 		driver.findElement(By.name("dept_name")).clear();
-		driver.findElement(By.name("dept_name")).sendKeys("D");
+		driver.findElement(By.name("dept_name")).sendKeys("Admin");
 		Thread.sleep(500);
 
 		driver.findElement(By.name("code")).clear();
 		driver.findElement(By.name("code")).sendKeys("5");
 		Thread.sleep(500);
 
-		driver.findElement(By.id("textArea")).sendKeys("This is D department");
+		driver.findElement(By.id("textArea")).sendKeys("This is Admin department");
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button"))
 				.click();
@@ -151,14 +151,14 @@ public class Main_automationpage extends Browser_launch_signup {
 		Thread.sleep(500);
 
 		driver.findElement(By.name("dept_name")).clear();
-		driver.findElement(By.name("dept_name")).sendKeys("E");
+		driver.findElement(By.name("dept_name")).sendKeys("HR");
 		Thread.sleep(500);
 
 		driver.findElement(By.name("code")).clear();
 		driver.findElement(By.name("code")).sendKeys("6");
 		Thread.sleep(500);
 
-		driver.findElement(By.id("textArea")).sendKeys("This is E department");
+		driver.findElement(By.id("textArea")).sendKeys("This is HR department");
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button"))
 				.click();
@@ -172,14 +172,14 @@ public class Main_automationpage extends Browser_launch_signup {
 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(By.name("dept_name")).clear();
-		driver.findElement(By.name("dept_name")).sendKeys("B");
+		driver.findElement(By.name("dept_name")).sendKeys("CEO");
 		Thread.sleep(500);
 
 		driver.findElement(By.name("code")).clear();
 		driver.findElement(By.name("code")).sendKeys("08");
 		Thread.sleep(500);
 
-		driver.findElement(By.id("textArea")).sendKeys("This is B department");
+		driver.findElement(By.id("textArea")).sendKeys("This is CEO department");
 		driver.findElement(By.xpath(
 				"//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/div/div/div/form/div[3]/button"))
 				.click();
@@ -247,7 +247,7 @@ public class Main_automationpage extends Browser_launch_signup {
 		// code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("1");
 		// name value
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("a");
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("tester");
 
 		// click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
@@ -266,7 +266,7 @@ public class Main_automationpage extends Browser_launch_signup {
 		// code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("2");
 		// name value
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("b");
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("qa");
 
 		// click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
@@ -286,7 +286,7 @@ public class Main_automationpage extends Browser_launch_signup {
 		// code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("3");
 		// name value
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("c");
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("developer");
 
 		// click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
@@ -306,7 +306,7 @@ public class Main_automationpage extends Browser_launch_signup {
 		// code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("4");
 		// name value
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("d");
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("admin");
 
 		// click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
@@ -326,7 +326,7 @@ public class Main_automationpage extends Browser_launch_signup {
 		// code value
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[2]/div/input")).sendKeys("5");
 		// name value
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("e");
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[2]/div[1]/div/input")).sendKeys("ceo");
 
 		// click on submit
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/form/div[4]/button")).click();
@@ -353,26 +353,18 @@ public class Main_automationpage extends Browser_launch_signup {
 			Thread.sleep(2000);
 		}
 
-	// ----------------------------click on submit and check
+	// ----------------------------user
 	// validation-------------------------------------------------------//
-
 	@Test(priority = 21)
 	public void user() throws InterruptedException {
-		// String[] lastname = {"patel"};
+		String lastname = "patel";
 		String[] Firstname = { "Milind", "Bhavik", "karan" };
 		String[] Employeeid = { "m1", "b1", "k1" };
 		String[] User = { "milinnd", "bhavik", "karran" };
-		
-		
-		//array lenth
-		int ilength =Firstname.length;
-		String test = Firstname[ilength-1];
-		System.out.println(test);
-		
+		String Slackid = "UCW2MFXU6";
 
-		for (int i = 0; i < Firstname.length; i++)
-		{
-			
+		for (int i = 0; i <Firstname.length; i++) {
+
 			// click on add user
 			driver.findElement(
 					By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
@@ -380,7 +372,7 @@ public class Main_automationpage extends Browser_launch_signup {
 			Thread.sleep(3000);
 
 			// last name
-			driver.findElement(By.name("last_name")).sendKeys("patel");
+			driver.findElement(By.name("last_name")).sendKeys(lastname);
 			Thread.sleep(2000);
 
 			// first name
@@ -390,6 +382,12 @@ public class Main_automationpage extends Browser_launch_signup {
 			// employeeid
 			driver.findElement(By.id("m_user_login_employeeid")).sendKeys(Employeeid[i]);
 			Thread.sleep(2000);
+
+			// slackid
+
+			if (i == 0) {
+				driver.findElement(By.name("slack_member_id")).sendKeys(Slackid);
+			}
 
 			// email
 			Random r = new Random();
@@ -403,39 +401,42 @@ public class Main_automationpage extends Browser_launch_signup {
 					driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[6]/div/select")));
 			dropdown.selectByVisibleText("Super Admin");
 			Thread.sleep(2000);
-			
-			//click on checkbox
-			driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span"))
-			.click();
+
+			// click on checkbox
+			driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span")).click();
+			Thread.sleep(2000);
 
 			// condition for last user click on checkbox (Travel expense and workflow)
-			if (i == Firstname.length - 1) 
-			{
-				//click on submit
-				driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-				
-				//verifed messsage
-				String actual = driver.findElement(By.className("alert-warning")).getText();
-				System.out.println(actual);
-				String expected = "×\n" + 
-						"You need to upgrade your package. Click here to upgrade your package.";
-				Assert.assertEquals(actual, expected);
-	
-				// after deselect click on submit
-				driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span"))
-						.click();
-		
-				driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();		
-			} else 
+			if (i == Firstname.length - 1)
+
 			{
 				// click on submit
 				driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
-				String user_alert = driver.findElement(By.className("alertOut")).getText();
-				String user_alert_real = "×\n" + "User created successfully";
-				Assert.assertEquals(user_alert, user_alert_real);
-				Thread.sleep(6000);
-				
-			}	
+
+				// verifed messsage
+				String actual = driver.findElement(By.className("alert-warning")).getText();
+				System.out.println(actual);
+				String expected = "×\n" + "You need to upgrade your package. Click here to upgrade your package.";
+				Assert.assertEquals(actual, expected);
+
+				// after deselect click on submit
+				driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[9]/div[2]/div/label/span[1]/span"))
+						.click();
+
+				driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+
+			}
+
+			// click on submit
+			driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
+			String user_alert = driver.findElement(By.className("alertOut")).getText();
+			String user_alert_real = "×\n" + "User created successfully";
+			Assert.assertEquals(user_alert, user_alert_real);
+			Thread.sleep(6000);
+
 		}
-}
 	}
+
+		
+		
+}

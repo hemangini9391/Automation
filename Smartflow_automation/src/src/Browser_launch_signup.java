@@ -13,9 +13,9 @@ import org.testng.annotations.Test;
 
 public class Browser_launch_signup {
 
-	public WebDriver driver;
-	public Robot robot;
-	public String url = "http://ec2-34-216-206-233.us-west-2.compute.amazonaws.com/m_user_login/sign_in#/app/dashboard/home";
+	public static WebDriver driver;
+	public static Robot robot;
+	public static String url = "http://ec2-34-216-206-233.us-west-2.compute.amazonaws.com/m_user_login/sign_in#/app/dashboard/home";
 
 	@Test(priority = 1)
 	public void browser_launch() throws InterruptedException {

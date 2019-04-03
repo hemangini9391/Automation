@@ -1,6 +1,5 @@
 package src;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 //import java.awt.event.KeyEvent;
 import java.util.Random;
@@ -78,8 +77,9 @@ public class User_registration extends Browser_launch_signup {
 		// slack member id validation
 		String[] slack = { "UCWXU6", "testtestt", "123456789" };
 
-		for (int i = 0; i <= slack.length; i++) {
-
+	
+		for (int i = 0; i <slack.length; i++) {
+     
 			if (i == 2) {
 				driver.findElement(By.name("slack_member_id")).sendKeys(slack[i]);
 				Thread.sleep(1000);
@@ -111,7 +111,7 @@ public class User_registration extends Browser_launch_signup {
 	}
 
 	@Test(priority = 14)
-	public void user() throws InterruptedException, AWTException {
+	public void user() throws InterruptedException {
 		String lastname = "patel";
 		String[] Firstname = { "Milind", "Bhavik", "karan" };
 		String[] Employeeid = { "m1", "b1", "k1" };
@@ -119,11 +119,11 @@ public class User_registration extends Browser_launch_signup {
 		String Slackid = "UCW2MFXU6";
 
 		// array lenth
-		int ilength = Firstname.length;
-		String test = Firstname[ilength - 1];
-		System.out.println(test);
+		//int ilength = Firstname.length;
+		//String test = Firstname[ilength - 1];
+		//System.out.println(test);
 
-		for (int i = 0; i <= Firstname.length; i++) {
+		for (int i = 0; i <Firstname.length; i++) {
 
 			// click on add user
 			driver.findElement(
@@ -199,6 +199,8 @@ public class User_registration extends Browser_launch_signup {
 
 	@Test(priority = 15)
 	public void test() throws InterruptedException {
+		
+		
 		// click on add user
 		driver.findElement(
 				By.xpath("//*[@id=\"wrapper\"]/div[5]/div[2]/div/section/div/div/aside/div/ui-view/ui-view/button"))
@@ -209,14 +211,17 @@ public class User_registration extends Browser_launch_signup {
 		driver.findElement(By.id("m_user_login_email")).sendKeys("chandni38@yopmail.com");
 		Thread.sleep(2000);
 
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
 		String exist_email = driver.findElement(By.id("id=\"m_user_login_email-error\"")).getText();
 		String real_exist_email = "Email already registerd.";
 		Assert.assertEquals(exist_email, real_exist_email);
+		Thread.sleep(2000);
 
 		// slack
-
-		driver.findElement(By.name("slack_member_id")).sendKeys("UCW2MFXU6");
+		driver.findElement(By.xpath("//input[@name='slack_member_id']")).sendKeys("UCW2MFXU6");
 		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[15]/button[1]")).submit();
 		String slack_exist1 = driver.findElement(By.xpath("//*[@id=\"m_user_login\"]/div/div[7]/div/span[1]"))
 				.getText();
 		String slack_exist = "Slack Member ID already been registerd";
